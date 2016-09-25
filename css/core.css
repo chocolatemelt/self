@@ -21,6 +21,16 @@ body, html {
 	height: 100%;
 }
 
+::selection {
+	color: #ce4444;
+	background: transparent;
+}
+
+::-moz-selection {
+	color: #ce4444;
+	background: transparent;
+}
+
 /* ====== COVER PAGE ====== */
 #cover {
 	width: 100%;
@@ -34,6 +44,49 @@ body, html {
 	background-size: 100% 100%;
 }
 
+#social-media {
+	display: inline;
+	position: absolute;
+	top: 0.5em; right: 0.5em;
+}
+
+#social-media li {
+	display: inline-block;
+}
+
+#social-media li a {
+	display: block;
+	width: 24px;
+	height: 24px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#social-media li.linkedin a {
+	background: url('../img/socialmedia.png') 0 0;
+}
+
+#social-media li.github a {
+	background: url('../img/socialmedia.png') -24px 0;
+}
+
+#social-media li.instagram a {
+	background: url('../img/socialmedia.png') 24px 0;
+}
+
+#social-media li.linkedin a:hover {
+	background: url('../img/socialmedia.png') 0 24px;
+}
+
+#social-media li.github a:hover {
+	background: url('../img/socialmedia.png') -24px 24px;
+}
+
+#social-media li.instagram a:hover {
+	background: url('../img/socialmedia.png') 24px 24px;
+}
+
 #left-page {
 	position: absolute;
 	top: 11.111%;
@@ -45,6 +98,7 @@ body, html {
 #left-page h1 {
 	font-size: 5vmax;
 	text-align: right;
+	line-height: 0.9em;
 }
 
 #right-page {
@@ -53,6 +107,7 @@ body, html {
 	right: 11.111%;
 	width: 33.333%;
 	height: 66.666%;
+	overflow: hidden;
 }
 
 #type-specimen {
@@ -68,11 +123,22 @@ body, html {
 
 .watching {
 	position: absolute;
-	font-size: 2vmax;
+	font-size: 1.5vmax;
 	bottom: 0.1em;
 	right: 0.1em;
 }
 
 .watching .highlight {
 	color: #ce4444;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (orientation: landscape) {
+}
+
+@media (orientation: portrait) {
+	#left-page { width: 77.777%; }
+	#left-page h1 { font-size: 10vmax; }
+	#right-page { display: none; }
+	#cover { background-image: url('../img/canon-half.png'); }
 }
