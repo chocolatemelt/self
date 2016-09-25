@@ -1,2 +1,3 @@
-# lychee
-personal portfolio website @
+# lycheeti.me
+
+personal website portfolio thingo
