@@ -96,9 +96,29 @@ body, html {
 }
 
 #left-page h1 {
-	font-size: 5vmax;
+	font-size: 6vmax;
 	text-align: right;
 	line-height: 0.9em;
+}
+
+#intro {
+	position: absolute;
+	width: 90%;
+	bottom: 0.1em;
+	left: 0.1em;
+	font-size: 2vmax;
+}
+
+#intro p.first {
+	margin-bottom: 1em;
+}
+
+#intro a {
+	color: #000;
+}
+
+#intro a:hover {
+	color: #ce4444;
 }
 
 #right-page {
