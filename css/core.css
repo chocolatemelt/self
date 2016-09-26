@@ -104,9 +104,9 @@ body, html {
 #intro {
 	position: absolute;
 	width: 90%;
-	bottom: 0.1em;
-	left: 0.1em;
-	font-size: 2vmax;
+	bottom: 0.2em;
+	left: 0.2em;
+	font-size: 4vmin;
 }
 
 #intro p.first {
@@ -157,8 +157,9 @@ body, html {
 }
 
 @media (orientation: portrait) {
-	#left-page { width: 77.777%; }
+	#left-page { width: 66.666%; left: 22.222%; }
 	#left-page h1 { font-size: 10vmax; }
+	#intro { font-size: 3vmax; }
 	#right-page { display: none; }
 	#cover { background-image: url('../img/canon-half.png'); }
 }
