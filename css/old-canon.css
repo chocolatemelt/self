@@ -97,14 +97,13 @@ body, html {
 }
 
 #left-page h1 {
-	color: #fff;
 	position: absolute;
-	left: -0.075em;
-	top: -0.025em;
-	/* bottom: -0.075em; */
+	top: 0.1em;
+	left: 0.1em;
 	font-size: 7vmax;
 	text-align: left;
 	line-height: 0.8em;
+	color: #fff;
 }
 
 #intro {
@@ -133,7 +132,6 @@ body, html {
 	right: 11.111%;
 	width: 33.333%;
 	height: 66.666%;
-	background-color: #fff;
 	overflow: hidden;
 }
 
