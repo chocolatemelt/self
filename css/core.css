@@ -1,0 +1,101 @@
+body, html {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 1.0em;
+	color: #111;
+	background-color: #fcfcfc;
+}
+
+::selection {
+	color: #ce4444;
+	background: transparent;
+}
+
+::-moz-selection {
+	color: #ce4444;
+	background: transparent;
+}
+
+#garden {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, serif;
+	background-color: #fcfcfc;
+}
+
+#garden h1.sign {
+	display: block;
+	position: absolute;
+	top: 14vh;
+	left: 19.25vw;
+	font-family: "MS Mincho", "MS PMincho", "ＭＳ 明朝", "ＭＳ Ｐ明朝",
+	             "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", serif;
+	font-size: 18vh;
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	z-index: 2;
+}
+
+#garden p.haiku {
+	display: block;
+	position: absolute;
+	top: 12vh;
+	right: 20vw;
+	font-family: "MS Mincho", "MS PMincho", "ＭＳ 明朝", "ＭＳ Ｐ明朝",
+	             "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", serif;
+	font-size: 5vmin;
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	z-index: 2;
+}
+
+#garden img.bonsai {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -16.5vw;
+	margin-left: -25vw;
+	width: 50vw;
+	z-index: 1;
+}
+
+#garden .tall {
+	display: none;
+}
+
+#paths {
+	position: absolute;
+	display: block;
+	bottom: 10vh;
+	left: 60vw;
+	font-size: 1.25em;
+}
+
+#paths a {
+	color: #111;
+	text-decoration: none;
+}
+
+#paths a:hover {
+	border-bottom: 1px solid #999;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (orientation: landscape) {
+}
+
+@media (orientation: portrait) {
+	#garden h1.sign { top: 36vh; left: 14vw; font-size: 14vh; }
+	#garden p.haiku { top: 12vh; right: 17vw; }
+	#garden img.bonsai { margin-top: -30vh; }
+	#garden .tall { display: block; }
+	#garden .long { display: none; }
+}
