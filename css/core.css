@@ -76,7 +76,8 @@ body, html {
 	display: block;
 	bottom: 10vh;
 	left: 60vw;
-	font-size: 1.25em;
+	font-size: 2vh;
+	z-index: 2;
 }
 
 #paths a {
@@ -93,9 +94,9 @@ body, html {
 }
 
 @media (orientation: portrait) {
-	#garden h1.sign { top: 36vh; left: 14vw; font-size: 14vh; }
-	#garden p.haiku { top: 12vh; right: 17vw; }
-	#garden img.bonsai { margin-top: -30vh; }
+	#garden h1.sign { top: 50vh; left: 11vw; font-size: 10vh; }
+	#garden p.haiku { top: 14vh; right: 14vw; }
+	#garden img.bonsai { width: 60%; margin-top: -45vw; margin-left: -30vw; }
 	#garden .tall { display: block; }
 	#garden .long { display: none; }
 }
