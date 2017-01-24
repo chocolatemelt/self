@@ -19,7 +19,7 @@ body, html {
 
 #garden {
 	position: relative;
-	width: 100%;
+	width: 80%;
 	height: 100%;
 	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, serif;
 	background-color: #fcfcfc;
@@ -28,8 +28,8 @@ body, html {
 #garden h1.sign {
 	display: block;
 	position: absolute;
-	top: 14vh;
-	left: 19.25vw;
+	top: 28vh;
+	left: 23.25vw;
 	font-family: "MS Mincho", "MS PMincho", "ＭＳ 明朝", "ＭＳ Ｐ明朝",
 	             "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", serif;
 	font-size: 18vh;
@@ -60,9 +60,8 @@ body, html {
 #garden img.bonsai {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	right: 0px;
 	margin-top: -16.5vw;
-	margin-left: -25vw;
 	width: 50vw;
 	z-index: 1;
 }
@@ -74,8 +73,8 @@ body, html {
 #paths {
 	position: absolute;
 	display: block;
-	bottom: 10vh;
-	left: 60vw;
+	bottom: 12vh;
+	right: 20%;
 	font-size: 2vh;
 	z-index: 2;
 }
