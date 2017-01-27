@@ -19,7 +19,7 @@ body, html {
 
 #garden {
 	position: relative;
-	width: 80%;
+	width: 85%;
 	height: 100%;
 	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, serif;
 	background-color: #fcfcfc;
@@ -29,7 +29,7 @@ body, html {
 	display: block;
 	position: absolute;
 	top: 28vh;
-	left: 23.25vw;
+	left: 28vw;
 	font-family: "MS Mincho", "MS PMincho", "ＭＳ 明朝", "ＭＳ Ｐ明朝",
 	             "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", serif;
 	font-size: 18vh;
@@ -74,7 +74,7 @@ body, html {
 	position: absolute;
 	display: block;
 	bottom: 12vh;
-	right: 20%;
+	right: 15%;
 	font-size: 2vh;
 	z-index: 2;
 }
