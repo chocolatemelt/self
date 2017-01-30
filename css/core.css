@@ -25,44 +25,13 @@ body, html {
 	background-color: #fcfcfc;
 }
 
-#garden h1.sign {
-	display: block;
-	position: absolute;
-	top: 28vh;
-	left: 28vw;
-	font-family: "MS Mincho", "MS PMincho", "ＭＳ 明朝", "ＭＳ Ｐ明朝",
-	             "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", serif;
-	font-size: 18vh;
-	-ms-writing-mode: tb-rl;
-	-webkit-writing-mode: vertical-rl;
-	-moz-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
-	writing-mode: vertical-rl;
-	z-index: 2;
-}
-
-#garden p.haiku {
-	display: block;
-	position: absolute;
-	top: 12vh;
-	right: 20vw;
-	font-family: "MS Mincho", "MS PMincho", "ＭＳ 明朝", "ＭＳ Ｐ明朝",
-	             "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", serif;
-	font-size: 5vmin;
-	-ms-writing-mode: tb-rl;
-	-webkit-writing-mode: vertical-rl;
-	-moz-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
-	writing-mode: vertical-rl;
-	z-index: 2;
-}
-
 #garden img.bonsai {
 	position: absolute;
 	top: 50%;
-	right: 0px;
-	margin-top: -16.5vw;
+	right: 1.5vw;
+	margin-top: -15vw;
 	width: 50vw;
+	height: 32.7vw;
 	z-index: 1;
 }
 
@@ -70,22 +39,81 @@ body, html {
 	display: none;
 }
 
-#paths {
-	position: absolute;
+#wall {
 	display: block;
-	bottom: 12vh;
-	right: 15%;
-	font-size: 2vh;
+	position: absolute;
+	width: 50vw;
+	height: 32.7vw;
+	top: 50%;
+	margin-top: -18.5vw;
+	right: -2vw;
+	border: 3px solid #000;
+	font-family: 'Playfair Display', serif;
+	font-size: 3vh;
+	font-style: italic;
+	text-transform: uppercase;
+	z-index: 3;
+}
+
+#wall h1.sign {
+	display: block;
+	padding: 20px;
+	text-align: right;
+	font-size: 4vh;
+}
+
+#wall .promo {
+	font-size: 6vh;
+	padding-right: 10px;
+}
+
+#wall h2.sign {
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-family: "MS Mincho", "MS PMincho", "ＭＳ 明朝", "ＭＳ Ｐ明朝",
+	             "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", serif;
+	font-size: 5vh;
+	font-style: normal;
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
 	z-index: 2;
 }
 
-#paths a {
+#wall .contact {
+	position: absolute;
+	top: 10vh;
+	margin-top: 20px;
+	left: -14vh;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+#wall .work {
+	position: absolute;
+	bottom: 10vh;
+	margin-bottom: 20px;
+	right: -14vh;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#wall a {
 	color: #111;
 	text-decoration: none;
 }
 
-#paths a:hover {
-	border-bottom: 1px solid #999;
+#wall a:hover {
 }
 
 /* ====== MEDIA QUERIES ====== */
