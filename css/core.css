@@ -27,11 +27,11 @@ body, html {
 
 #garden img.bonsai {
 	position: absolute;
-	top: 50%;
-	right: 1.5vw;
-	margin-top: -15vw;
-	width: 50vw;
-	height: 32.7vw;
+	top: 50vmin;
+	right: 3vmin;
+	margin-top: -30vmin;
+	width: 100vmin;
+	height: 65.4vmin;
 	z-index: 1;
 }
 
@@ -42,14 +42,14 @@ body, html {
 #wall {
 	display: block;
 	position: absolute;
-	width: 50vw;
-	height: 32.7vw;
-	top: 50%;
-	margin-top: -18.5vw;
-	right: -2vw;
+	width: 100vmin;
+	height: 65.4vmin;
+	top: 50vmin;
+	margin-top: -37vmin;
+	right: -4vmin;
 	border: 3px solid #000;
-	font-family: 'Playfair Display', serif;
-	font-size: 3vh;
+	font-family: 'Old Standard TT', serif;
+	font-size: 3vmin;
 	font-style: italic;
 	text-transform: uppercase;
 	z-index: 3;
@@ -57,13 +57,14 @@ body, html {
 
 #wall h1.sign {
 	display: block;
-	padding: 20px;
+	padding-top: 20px;
+	padding-right: 10px;
 	text-align: right;
-	font-size: 4vh;
+	font-size: 4vmin;
 }
 
 #wall .promo {
-	font-size: 6vh;
+	font-size: 6vmin;
 	padding-right: 10px;
 }
 
@@ -74,7 +75,7 @@ body, html {
 	left: 20px;
 	font-family: "MS Mincho", "MS PMincho", "ＭＳ 明朝", "ＭＳ Ｐ明朝",
 	             "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", serif;
-	font-size: 5vh;
+	font-size: 5vmin;
 	font-style: normal;
 	-ms-writing-mode: tb-rl;
 	-webkit-writing-mode: vertical-rl;
@@ -86,9 +87,9 @@ body, html {
 
 #wall .contact {
 	position: absolute;
-	top: 10vh;
+	top: 10vmin;
 	margin-top: 20px;
-	left: -14vh;
+	left: -14vmin;
 	-webkit-transform: rotate(-90deg);
 	-moz-transform: rotate(-90deg);
 	-o-transform: rotate(-90deg);
@@ -98,9 +99,9 @@ body, html {
 
 #wall .work {
 	position: absolute;
-	bottom: 10vh;
+	bottom: 10vmin;
 	margin-bottom: 20px;
-	right: -14vh;
+	right: -14vmin;
 	-webkit-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);
 	-o-transform: rotate(90deg);
