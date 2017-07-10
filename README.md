@@ -1,3 +1,3 @@
-# lycheeti.me
+# zhangkev.in
 
-personal website portfolio thingo
+art house style portfolio of stuff
