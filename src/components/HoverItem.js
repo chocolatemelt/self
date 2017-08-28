@@ -11,8 +11,13 @@ export default class HoverItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hover: false
+      hover: true
     };
+  }
+
+  hover = () => {
+    this.setState({hover: !this.state.hover});
+    console.log(this.state.hover);
   }
 
   render() {
@@ -23,8 +28,8 @@ export default class HoverItem extends Component {
       text
     } = this.props;
     return(
-      <li onMouseOver={() => {console.log("x")}}>
-        {text}
+      <li>
+        <span onMouseEnter={this.hover} onMouseLeave={this.hover}>{text}</span>
         <div className="hover" style={{top: "2em"}}>
           {children}
         </div>

@@ -22,3 +22,10 @@ body {
 .hover {
   position: absolute;
 }
+
+.hide {
+  display: none;
+}
+
+.clickable {
+}
