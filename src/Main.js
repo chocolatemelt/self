@@ -9,13 +9,17 @@ class Main extends Component {
         <h1>hey, i'm kevin</h1>
         <ul>
           <HoverItem
-            hover={{}}
             top={0}
             left={0}
-            text="about" />
+            text="about">
+            <p>new england based developer</p>
+          </HoverItem>
           <li>contact</li>
-          <li>instagram</li>
           <li>journal</li>
+        </ul>
+        <ul>
+          <li>github</li>
+          <li>instagram</li>
         </ul>
       </div>
     );

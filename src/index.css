@@ -10,3 +10,15 @@ body {
 .main h1 {
   margin-bottom: 1em;
 }
+
+.main ul {
+  margin-bottom: 1em;
+}
+
+.main ul li {
+  text-decoration: underline;
+}
+
+.hover {
+  position: absolute;
+}
