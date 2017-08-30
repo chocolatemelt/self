@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import className from 'classnames';
 
 export default class HoverItem extends Component {
   static propTypes = {
@@ -30,7 +31,7 @@ export default class HoverItem extends Component {
     return(
       <li>
         <span onMouseEnter={this.hover} onMouseLeave={this.hover}>{text}</span>
-        <div className="hover" style={{top: "2em"}}>
+        <div className={className((this.state.hover) ? "hover" : "hide")} style={{top: "2em"}}>
           {children}
         </div>
       </li>
