@@ -27,5 +27,10 @@ body {
   display: none;
 }
 
-.clickable {
+.new {
+  margin-top: 1em;
+}
+
+.about {
+  width: 45vw;
 }

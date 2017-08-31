@@ -6,6 +6,7 @@ export default class HoverItem extends Component {
   static propTypes = {
     top: PropTypes.number.isRequired,
     left: PropTypes.number.isRequired,
+    page: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
   };
 
@@ -25,13 +26,19 @@ export default class HoverItem extends Component {
       children,
       top,
       left,
+      page,
       text
     } = this.props;
     return(
       <li>
-        <span onMouseEnter={this.hover} onMouseLeave={this.hover}>{text}</span>
-        <div className={className((this.state.hover) ? "hover" : "hide")}
-             style={{top: `${top}em`, left: `${left}em`}}>
+        <span
+          onMouseEnter={this.hover}
+          onMouseLeave={this.hover}
+          style={{cursor: "pointer"}}>
+          {text}
+        </span>
+        <div className={className((this.state.hover) ? "hover" : "hide", page)}
+          style={{top: `${top}em`, left: `${left}em`}}>
           {children}
         </div>
       </li>
