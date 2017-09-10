@@ -4,9 +4,7 @@ import className from 'classnames';
 
 export default class HoverItem extends Component {
 		static propTypes = {
-			top: PropTypes.number.isRequired,
-			left: PropTypes.number.isRequired,
-			page: PropTypes.string.isRequired,
+			page: PropTypes.string,
 			text: PropTypes.string.isRequired,
 			link: PropTypes.string
 		};
@@ -25,8 +23,6 @@ export default class HoverItem extends Component {
 		render() {
 			const {
 				children,
-				top,
-				left,
 				page,
 				text,
 				link
@@ -34,6 +30,7 @@ export default class HoverItem extends Component {
 			return(
 				<li>
 					<span
+						className='link'
 						onMouseEnter={this.hover}
 						onMouseLeave={this.hover}
 						style={{cursor: 'pointer'}}>
@@ -43,8 +40,7 @@ export default class HoverItem extends Component {
 							text
 						)}
 					</span>
-					<div className={className((this.state.hover) ? 'hover' : 'hide', page)}
-						style={{top: `${top}em`, left: `${left}em`}}>
+					<div className={className((this.state.hover) ? 'hover' : 'hide')}>
 						{children}
 					</div>
 				</li>

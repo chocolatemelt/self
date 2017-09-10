@@ -9,8 +9,6 @@ class Main extends Component {
 				<h1>hey, i'm kevin</h1>
 				<ul>
 					<HoverItem
-						top={3}
-						left={10}
 						page="about"
 						text="about">
 						<p>kevin zhang</p>
@@ -26,16 +24,12 @@ class Main extends Component {
 						</p>
 					</HoverItem>
 					<HoverItem
-						top={3}
-						left={10}
 						page="contact"
 						text="contact">
 						<p>hello [at] zhangkev.in</p>
 						<p className="new">though i doubt anyone's gonna scrape that email...</p>
 					</HoverItem>
 					<HoverItem
-						top={3}
-						left={10}
 						page="journal"
 						text="journal">
 						<p>personal thoughts and opinions are mine and mine alone</p>
@@ -43,17 +37,11 @@ class Main extends Component {
 				</ul>
 				<ul>
 					<HoverItem
-						top={3}
-						left={10}
-						page="github"
 						text="github"
 						link="https://github.com/chocolatemelt">
 						<p>various codebases of questionable usefulness</p>
 					</HoverItem>
 					<HoverItem
-						top={3}
-						left={10}
-						page="instagram"
 						text="instagram"
 						link="https://www.instagram.com/itsuwaru">
 						<p>personal stuff for now - but maybe i'll start posting art</p>
