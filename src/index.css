@@ -4,7 +4,10 @@ body {
 }
 
 .main {
-  margin: 1em;
+  width: 10vw;
+  position: fixed;
+  top: 1em;
+  left: 1em;
 }
 
 .main h1 {
@@ -23,8 +26,21 @@ body {
   color: #000;
 }
 
+.main ul li a:hover, .link:hover {
+  color: #fff;
+  background-color: #000;
+  text-decoration: underline;
+}
+
 .hover {
-  position: absolute;
+  width: 20em;
+  position: fixed;
+  top: 3em;
+  left: 10em;
+}
+
+.hover p {
+  width: 20em;
 }
 
 .hide {
