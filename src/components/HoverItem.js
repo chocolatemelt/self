@@ -7,7 +7,8 @@ export default class HoverItem extends Component {
 			top: PropTypes.number.isRequired,
 			left: PropTypes.number.isRequired,
 			page: PropTypes.string.isRequired,
-			text: PropTypes.string.isRequired
+			text: PropTypes.string.isRequired,
+			link: PropTypes.string
 		};
 
 		constructor(props) {
@@ -27,7 +28,8 @@ export default class HoverItem extends Component {
 				top,
 				left,
 				page,
-				text
+				text,
+				link
 			} = this.props;
 			return(
 				<li>
@@ -35,7 +37,11 @@ export default class HoverItem extends Component {
 						onMouseEnter={this.hover}
 						onMouseLeave={this.hover}
 						style={{cursor: 'pointer'}}>
-						{text}
+						{link ? (
+							<a href={link}>{text}</a>
+						) : (
+							text
+						)}
 					</span>
 					<div className={className((this.state.hover) ? 'hover' : 'hide', page)}
 						style={{top: `${top}em`, left: `${left}em`}}>

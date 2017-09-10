@@ -46,14 +46,16 @@ class Main extends Component {
 						top={3}
 						left={10}
 						page="github"
-						text="github">
+						text="github"
+						link="https://github.com/chocolatemelt">
 						<p>various codebases of questionable usefulness</p>
 					</HoverItem>
 					<HoverItem
 						top={3}
 						left={10}
 						page="instagram"
-						text="instagram">
+						text="instagram"
+						link="https://www.instagram.com/itsuwaru">
 						<p>personal stuff for now - but maybe i'll start posting art</p>
 					</HoverItem>
 				</ul>
