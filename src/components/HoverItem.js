@@ -1,23 +1,24 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import className from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import className from "classnames";
 
 export default class HoverItem extends Component {
 		static propTypes = {
+			children: PropTypes.node,
 			page: PropTypes.string,
 			text: PropTypes.string.isRequired,
-			link: PropTypes.string
+			link: PropTypes.string,
 		};
 
 		constructor(props) {
 			super(props);
 			this.state = {
-				hover: false
+				hover: false,
 			};
 		}
 
 		hover = () => {
-			this.setState({hover: !this.state.hover});
+			this.setState({ hover: !this.state.hover });
 		}
 
 		render() {
@@ -25,22 +26,23 @@ export default class HoverItem extends Component {
 				children,
 				page,
 				text,
-				link
+				link,
 			} = this.props;
-			return(
+			return (
 				<li>
 					<span
-						className='link'
+						className="link"
 						onMouseEnter={this.hover}
 						onMouseLeave={this.hover}
-						style={{cursor: 'pointer'}}>
+						style={{ cursor: "pointer" }}
+					>
 						{link ? (
 							<a href={link}>{text}</a>
 						) : (
 							text
 						)}
 					</span>
-					<div className={className((this.state.hover) ? 'hover' : 'hide')}>
+					<div className={className((this.state.hover) ? "hover" : "hide")}>
 						{children}
 					</div>
 				</li>
