@@ -14,11 +14,12 @@ const Main = () => (
 				<p>frontend engineer @ federated wireless</p>
 				<p className="new">
           hey there - i'm a developer slash designer from boston, ma.
-          i'm a graduate of rensselaer polytechnic institute's class of
-          2017, though i entered with the class of 2018.
+          i did three years doing computer science at rensselaer polytechnic
+					institute, graduating in 2017. i'm passionate about art and weird
+					design, despite all evidence pointing to the contrary.
 				</p>
 				<p className="new">
-          i have an unhealthy fascination with fountain pens.
+          i also have an unhealthy fascination with fountain pens.
           send help
 				</p>
 			</HoverItem>
@@ -33,7 +34,7 @@ const Main = () => (
 				page="journal"
 				text="journal"
 			>
-				<p>personal thoughts and opinions are mine and mine alone</p>
+				<p>a penny for my thoughts?</p>
 			</HoverItem>
 		</ul>
 		<ul>
@@ -47,7 +48,7 @@ const Main = () => (
 				text="instagram"
 				link="https://www.instagram.com/itsuwaru"
 			>
-				<p>personal stuff for now - but maybe i'll start posting art</p>
+				<p>art, food, and other generic instagram stuff</p>
 			</HoverItem>
 		</ul>
 	</div>
