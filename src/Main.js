@@ -15,8 +15,13 @@ const Main = () => (
 				<p className="new">
           hey there - i'm a developer slash designer from boston, ma.
           i did three years doing computer science at rensselaer polytechnic
-					institute, graduating in 2017. i'm passionate about art and weird
-					design, despite all evidence pointing to the contrary.
+					institute, graduating in 2017.
+				</p>
+				<p className="new">
+					i'm passionate about art and weird design, despite all evidence
+					pointing to the contrary. i'm big on traditional art, which
+					may or may not be related to my inability to use tablets. my
+					primary tools are pencil, photoshop, and indesign.
 				</p>
 				<p className="new">
           i also have an unhealthy fascination with fountain pens.
