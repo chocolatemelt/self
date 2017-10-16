@@ -47,7 +47,7 @@ const Main = () => (
 				text="github"
 				link="https://github.com/chocolatemelt"
 			>
-				<p>various codebases of questionable usefulness</p>
+				<p>a running tally of the worst code i've ever written</p>
 			</HoverItem>
 			<HoverItem
 				text="instagram"
