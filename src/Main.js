@@ -33,13 +33,13 @@ const Main = () => (
 				text="contact"
 			>
 				<p>hello [at] zhangkev.in</p>
-				<p className="new">though i doubt anyone's gonna scrape that email...</p>
+				<p className="new">please don't sell me out</p>
 			</HoverItem>
 			<HoverItem
 				page="journal"
 				text="journal"
 			>
-				<p>a penny for my thoughts?</p>
+				<p>[ wave emoji ]</p>
 			</HoverItem>
 		</ul>
 		<ul>
@@ -47,7 +47,7 @@ const Main = () => (
 				text="github"
 				link="https://github.com/chocolatemelt"
 			>
-				<p>a running tally of the worst code i've ever written</p>
+				<p>spaghetti code with a side of failing builds</p>
 			</HoverItem>
 			<HoverItem
 				text="instagram"
