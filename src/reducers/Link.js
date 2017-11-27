@@ -1,7 +1,7 @@
 import {
 	HOVER_LINK,
 	CLICK_LINK,
-} from "../actions";
+} from "../actions/Link";
 
 const page = (state = {
 	activeHover: "", // hover text

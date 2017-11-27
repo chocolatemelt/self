@@ -1,9 +1,9 @@
 import {
-	HOVER_LINK,
-	CLICK_LINK,
+	hoverLink,
+	clickLink,
 } from "./Link";
 
 export default {
-	HOVER_LINK,
-	CLICK_LINK,
+	hoverLink,
+	clickLink,
 };

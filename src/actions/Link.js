@@ -7,3 +7,10 @@ export function hoverLink(text) {
 		text,
 	};
 }
+
+export function clickLink(text) {
+	return {
+		type: CLICK_LINK,
+		text,
+	};
+}

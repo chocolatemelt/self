@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import className from "classnames";
 
-export default class HoverItem extends Component {
+import { hoverLink, clickLink } from "../actions/Link";
+
+class HoverItem extends Component {
 		static propTypes = {
 			children: PropTypes.node,
 			page: PropTypes.string,
 			text: PropTypes.string.isRequired,
 			link: PropTypes.string,
+			dispatch: PropTypes.func,
 		};
 
 		constructor(props) {
@@ -19,6 +23,7 @@ export default class HoverItem extends Component {
 
 		hover = () => {
 			this.setState({ hover: !this.state.hover });
+			this.props.dispatch(clickLink("xd"));
 		}
 
 		render() {
@@ -49,3 +54,5 @@ export default class HoverItem extends Component {
 			);
 		}
 }
+
+export default connect()(HoverItem);
