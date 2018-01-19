@@ -1,11 +1,17 @@
 import React from "react";
 
-import HoverItem from "./components/HoverItem";
+import HoverItem from "../components/HoverItem";
 
 const Main = () => (
 	<div className="main">
 		<h1>hey, i'm kevin</h1>
 		<ul>
+			<HoverItem
+				page="work"
+				text="work"
+			>
+				xdxd
+			</HoverItem>
 			<HoverItem
 				page="about"
 				text="about"
@@ -29,15 +35,9 @@ const Main = () => (
 				</p>
 			</HoverItem>
 			<HoverItem
-				page="contact"
-				text="contact"
-			>
-				<p>hello [at] zhangkev.in</p>
-				<p className="new">please don't sell me out</p>
-			</HoverItem>
-			<HoverItem
 				page="journal"
 				text="journal"
+				link="/journal"
 			>
 				<p>[ wave emoji ]</p>
 			</HoverItem>
