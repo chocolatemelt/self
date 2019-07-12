@@ -1,3 +1,3 @@
-# 偽る
+# 自己
 
-to disguise, cheat, falsify
+personal website, built react+redux
