@@ -7,6 +7,7 @@ import Root from './containers/Root';
 import configureStore from './configureStore';
 import registerServiceWorker from './registerServiceWorker';
 import './css/reset.css';
+import './css/ricty.css';
 import './css/index.css';
 
 const store = configureStore();
