@@ -5,7 +5,7 @@ const Where = ({ history }) => (
   <div className="page where">
     <p>seems you've landed in uncharted territory</p>
     <p className="br">
-      <button className="a" type="button">
+      <button className="a" type="button" onClick={() => history.goBack()}>
         back
       </button>
     </p>
