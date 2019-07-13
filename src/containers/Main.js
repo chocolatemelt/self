@@ -1,24 +1,27 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import HoverItem from '../components/HoverItem';
 
 const Main = () => (
-  <div className="main">
-    <h1>
-      <a className="lead" href="/who">
-        hey, i'm kevin
-      </a>
-    </h1>
-    <ul>
-      <HoverItem text="projects" link="/projects" />
-      <HoverItem text="drawings" link="/drawings" />
-      <HoverItem text="compositions" link="compositions" />
-    </ul>
-    <ul>
-      <HoverItem text="github" link="https://github.com/chocolatemelt" />
-      <HoverItem text="instagram" link="https://www.instagram.com/itsuwaru" />
-    </ul>
-  </div>
+  <Router>
+    <div className="main">
+      <h1>
+        <a className="lead" href="/who">
+          hey, i'm kevin
+        </a>
+      </h1>
+      <ul>
+        <HoverItem link="/projects">projects</HoverItem>
+        <HoverItem link="/drawings">drawings</HoverItem>
+        <HoverItem link="/compositions">compositions</HoverItem>
+      </ul>
+      <ul>
+        <HoverItem href="https://github.com/chocolatemelt">github</HoverItem>
+        <HoverItem href="https://instagram.com/itsuwaru">instagram</HoverItem>
+      </ul>
+    </div>
+  </Router>
 );
 
 export default Main;
