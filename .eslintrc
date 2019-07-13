@@ -4,7 +4,7 @@
     "es6": true,
     "node": true
   },
-  "extends": "airbnb",
+  "extends": ["airbnb", "prettier"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
@@ -13,11 +13,12 @@
     },
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["prettier", "react"],
   "rules": {
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["error", "unix"],
     "no-tabs": 0,
+    "prettier/prettier": ["error"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
