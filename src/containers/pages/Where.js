@@ -1,9 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const bunsetsu = [
+  "seems you've landed in uncharted territory",
+  '404',
+  'where am i',
+  'lost?',
+  'dead end',
+  'take a u-turn',
+];
+
+const rng = () => bunsetsu[Math.floor(Math.random() * bunsetsu.length)];
+
 const Where = ({ history }) => (
   <div className="page where">
-    <p>seems you've landed in uncharted territory</p>
+    <p>{rng()}</p>
     <p className="br">
       <button className="a" type="button" onClick={() => history.goBack()}>
         back
