@@ -9,30 +9,21 @@ body {
   line-height: 1.36364em;
 }
 
-.lead {
+.lead,
+.x {
   color: #000;
   text-decoration: none;
 }
 
-.lead:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.x {
-  text-decoration: none;
-}
-
+.lead:hover,
 .x:hover {
   background-color: #000;
   color: #fff;
 }
 
 #main {
-  width: 10em;
-  position: fixed;
-  top: 1em;
-  left: 1em;
+  margin-top: 1em;
+  margin-left: 1em;
 }
 
 #main h1 {
@@ -61,7 +52,7 @@ body {
 .page {
   width: 40em;
   position: absolute;
-  top: 2em;
+  top: 3em;
   left: 11em;
 }
 
@@ -69,12 +60,22 @@ body {
   width: 20em;
 }
 
+p.br {
+  margin-top: 1em;
+}
+
 .hide {
   display: none;
 }
 
-.new {
-  margin-top: 1em;
+/* side */
+.side {
+  position: fixed;
+}
+
+/* who */
+.who {
+  width: 20em;
 }
 
 /* transitions */
