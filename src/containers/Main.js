@@ -2,26 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Nav from '../components/Nav';
-
-function Index() {
-  return <h2>nothing to see but us chickens</h2>;
-}
-
-function About() {
-  return <h2>about</h2>;
-}
-
-function Projects() {
-  return <h2>projects</h2>;
-}
-
-function Drawings() {
-  return <h2>drawings</h2>;
-}
-
-function Compositions() {
-  return <h2>comps</h2>;
-}
+import Index from './pages/Index';
+import Projects from './pages/Projects';
+import Drawings from './pages/Drawings';
+import Compositions from './pages/Compositions';
+import Who from './pages/Who';
 
 const Main = () => (
   <Router>
@@ -49,7 +34,7 @@ const Main = () => (
       <Route path="/projects" component={Projects} />
       <Route path="/drawings" component={Drawings} />
       <Route path="/compositions" component={Compositions} />
-      <Route path="/who" component={About} />
+      <Route path="/who" component={Who} />
     </div>
   </Router>
 );
