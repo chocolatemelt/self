@@ -11,7 +11,7 @@ import Compositions from './pages/Compositions';
 import Who from './pages/Who';
 
 const Main = ({ location }) => (
-  <div className="main">
+  <>
     <h1>
       <Link className="lead" to="/who">
         hey, i'm kevin
@@ -48,7 +48,7 @@ const Main = ({ location }) => (
         </Switch>
       </CSSTransition>
     </TransitionGroup>
-  </div>
+  </>
 );
 
 Main.propTypes = {

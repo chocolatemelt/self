@@ -28,30 +28,30 @@ body {
   color: #fff;
 }
 
-.main {
+#main {
   width: 10em;
   position: fixed;
   top: 1em;
   left: 1em;
 }
 
-.main h1 {
+#main h1 {
   margin-bottom: 1em;
 }
 
-.main ul {
+#main ul {
   margin-bottom: 1em;
 }
 
-.main ul li {
+#main ul li {
   text-decoration: underline;
 }
 
-.main ul li a {
+#main ul li a {
   color: #000;
 }
 
-.main ul li a:hover,
+#main ul li a:hover,
 .link:hover {
   color: #fff;
   background-color: #000;
