@@ -9,12 +9,18 @@ body {
   line-height: 1.36364em;
 }
 
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
 .lead,
 .x {
   color: #000;
   text-decoration: none;
 }
 
+a:hover,
 button.a:hover,
 .lead:hover,
 .x:hover {
@@ -48,12 +54,9 @@ button.a {
   margin-bottom: 1em;
 }
 
-#main ul li {
-  text-decoration: underline;
-}
-
 #main ul li a {
   color: #000;
+  text-decoration: underline;
 }
 
 #main ul li a:hover,
@@ -68,6 +71,7 @@ button.a {
   position: absolute;
   top: 3em;
   left: 11em;
+  padding-bottom: 3em;
 }
 
 .page p {
@@ -90,6 +94,52 @@ p.br {
 /* who */
 .who {
   width: 20em;
+}
+
+/* cv */
+.cv p {
+  width: 100%;
+}
+
+.cv ul {
+  list-style-type: square;
+}
+
+.cv ul li {
+  text-decoration: none;
+}
+
+.cv .cvname {
+  margin-top: 0;
+  border: none;
+}
+
+.cv .cvhead::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.cv h1,
+.cv h2,
+.cv h3 {
+  margin-top: 1em;
+}
+
+.cv .i-1 {
+  margin-left: 1em;
+}
+
+.cv .i-2 {
+  margin-left: 2em;
+}
+
+.cv .left {
+  float: left;
+}
+
+.cv .right {
+  float: right;
 }
 
 /* transitions */
