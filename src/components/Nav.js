@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { clickLink } from '../actions/Link';
+import { hoverLink } from '../actions/Link';
 
 class Nav extends Component {
   static propTypes = {
     children: PropTypes.node,
     href: PropTypes.bool,
     link: PropTypes.string,
+    page: PropTypes.string.isRequired,
     dispatch: PropTypes.func,
   };
 
@@ -20,21 +21,21 @@ class Nav extends Component {
     };
   }
 
-  hover = () => {
+  onHover = page => {
     const { hover } = this.state;
     const { dispatch } = this.props;
     this.setState({ hover: !hover });
-    dispatch(clickLink('xd'));
+    dispatch(hoverLink(page));
   };
 
   render() {
-    const { children, href, link } = this.props;
+    const { children, href, link, page } = this.props;
     return (
       <li>
         <span
           className="link"
-          onMouseEnter={this.hover}
-          onMouseLeave={this.hover}
+          onMouseEnter={() => this.onHover(page)}
+          onMouseLeave={() => this.onHover('')}
           style={{ cursor: 'pointer' }}
         >
           {href ? <a href={link}>{children}</a> : <Link to={link}>{children}</Link>}
