@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import className from 'classnames';
 
-import { hoverLink, clickLink } from '../actions/Link';
+import { clickLink } from '../actions/Link';
 
 class Nav extends Component {
   static propTypes = {
@@ -29,7 +28,6 @@ class Nav extends Component {
   };
 
   render() {
-    const { hover } = this.state;
     const { children, href, link } = this.props;
     return (
       <li>
