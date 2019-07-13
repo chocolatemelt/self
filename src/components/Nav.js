@@ -6,7 +6,7 @@ import className from 'classnames';
 
 import { hoverLink, clickLink } from '../actions/Link';
 
-class HoverItem extends Component {
+class Nav extends Component {
   static propTypes = {
     children: PropTypes.node,
     href: PropTypes.bool,
@@ -47,4 +47,4 @@ class HoverItem extends Component {
   }
 }
 
-export default connect()(HoverItem);
+export default connect()(Nav);
