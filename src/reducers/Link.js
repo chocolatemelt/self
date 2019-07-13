@@ -5,7 +5,7 @@ const LinkReducer = (
     activeHover: '',
     activePage: '',
   },
-  action,
+  action
 ) => {
   switch (action.type) {
     case HOVER_LINK:
