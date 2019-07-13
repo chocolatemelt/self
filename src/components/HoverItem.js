@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import className from 'classnames';
 
@@ -8,8 +9,7 @@ import { hoverLink, clickLink } from '../actions/Link';
 class HoverItem extends Component {
   static propTypes = {
     children: PropTypes.node,
-    page: PropTypes.string,
-    text: PropTypes.string.isRequired,
+    href: PropTypes.bool,
     link: PropTypes.string,
     dispatch: PropTypes.func,
   };
@@ -22,12 +22,15 @@ class HoverItem extends Component {
   }
 
   hover = () => {
-    this.setState({ hover: !this.state.hover });
-    this.props.dispatch(clickLink('xd'));
+    const { hover } = this.state;
+    const { dispatch } = this.props;
+    this.setState({ hover: !hover });
+    dispatch(clickLink('xd'));
   };
 
   render() {
-    const { children, page, text, link } = this.props;
+    const { hover } = this.state;
+    const { children, href, link } = this.props;
     return (
       <li>
         <span
@@ -36,9 +39,9 @@ class HoverItem extends Component {
           onMouseLeave={this.hover}
           style={{ cursor: 'pointer' }}
         >
-          {link ? <a href={link}>{text}</a> : text}
+          {href ? <a href={link}>{children}</a> : <Link to={link}>{children}</Link>}
         </span>
-        <div className={className(this.state.hover ? 'hover' : 'hide')}>{children}</div>
+        {/* <div className={className(hover ? 'hover' : 'hide')}>{children}</div> */}
       </li>
     );
   }
