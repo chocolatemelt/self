@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const bunsetsu = [
-  "seems you've landed in uncharted territory",
   '404',
   'where am i',
   'lost?',
   'dead end',
   'take a u-turn',
+  '迷ってますか？',
+  '助けてくれ',
 ];
 
 const rng = () => bunsetsu[Math.floor(Math.random() * bunsetsu.length)];
