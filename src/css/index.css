@@ -1,3 +1,8 @@
+::selection {
+  color: #fff;
+  background-color: #000;
+}
+
 body {
   font-size: 10pt;
   font-family: 'Courier New', Courier, Monaco, monospace;
@@ -10,6 +15,15 @@ body {
 }
 
 .lead:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.x {
+  text-decoration: none;
+}
+
+.x:hover {
   background-color: #000;
   color: #fff;
 }
@@ -63,6 +77,21 @@ body {
   margin-top: 1em;
 }
 
-.about {
-  width: 45vw;
+/* transitions */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 100ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 100ms ease-in;
 }
