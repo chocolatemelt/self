@@ -1,3 +1,5 @@
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -9,6 +11,6 @@ import './css/index.css';
 
 const store = configureStore();
 
-ReactDOM.render(<Root store={store} />, document.getElementById('root'));
+ReactDOM.render(<Root store={store} />, document.getElementById('main'));
 
 registerServiceWorker();
