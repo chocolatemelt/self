@@ -1,6 +1,7 @@
 body {
   font-size: 10pt;
   font-family: "Courier New", Courier, Monaco, monospace;
+  line-height: 1.36364em;
 }
 
 .main {
@@ -26,7 +27,8 @@ body {
   color: #000;
 }
 
-.main ul li a:hover, .link:hover {
+.main ul li a:hover,
+.link:hover {
   color: #fff;
   background-color: #000;
   text-decoration: underline;
