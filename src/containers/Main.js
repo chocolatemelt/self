@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Switch, withRouter } from 'react-router-dom';
+import { Link, Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import PropTypes from 'prop-types';
 
@@ -9,6 +9,10 @@ import Projects from './pages/Projects';
 import Drawings from './pages/Drawings';
 import Compositions from './pages/Compositions';
 import Who from './pages/Who';
+import CurriculumVitae from './pages/CurriculumVitae';
+import Where from './pages/Where';
+
+const Redirect404 = () => <Redirect to="/whereami" />;
 
 const Main = ({ location }) => (
   <>
@@ -53,6 +57,9 @@ const Main = ({ location }) => (
           <Route path="/drawings" component={Drawings} />
           <Route path="/compositions" component={Compositions} />
           <Route path="/who" component={Who} />
+          <Route path="/cv" component={CurriculumVitae} />
+          <Route path="/whereami" component={Where} />
+          <Route path="*" component={Redirect404} />
         </Switch>
       </CSSTransition>
     </TransitionGroup>
