@@ -7,8 +7,7 @@ const Who = () => (
       massachusetts.
     </p>
     <p className="br">
-      i'm passionate about all things visual, and have been drawing on-and-off for the past 20
-      years. in addition, i'm something of a fountain pen connoisseur, which is about as nerdy as it
+      i'm passionate about all things visual, and have been drawing on-and-off for the past 3      years. in addition, i'm something of a fountain pen connoisseur, which is about as nerdy as it
       gets.
     </p>
     <p className="br">come say hi:</p>
