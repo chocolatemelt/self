@@ -1,9 +1,8 @@
-import { HOVER_LINK, CLICK_LINK } from '../actions/Link';
+import { HOVER_LINK } from '../actions/Link';
 
 const LinkReducer = (
   state = {
-    activeHover: '',
-    activePage: '',
+    active: '',
   },
   action
 ) => {
@@ -11,12 +10,7 @@ const LinkReducer = (
     case HOVER_LINK:
       return {
         ...state,
-        activeHover: action.text,
-      };
-    case CLICK_LINK:
-      return {
-        ...state,
-        activePage: action.page,
+        active: action.page,
       };
     default:
       return state;

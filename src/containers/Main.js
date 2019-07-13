@@ -19,15 +19,21 @@ const Main = ({ location }) => (
         </Link>
       </h1>
       <ul>
-        <Nav link="/projects">projects</Nav>
-        <Nav link="/drawings">drawings</Nav>
-        <Nav link="/compositions">compositions</Nav>
+        <Nav page="projects" link="/projects">
+          projects
+        </Nav>
+        <Nav page="drawings" link="/drawings">
+          drawings
+        </Nav>
+        <Nav page="compositions" link="/compositions">
+          compositions
+        </Nav>
       </ul>
       <ul>
-        <Nav href link="https://github.com/chocolatemelt">
+        <Nav page="github" href link="https://github.com/chocolatemelt">
           github
         </Nav>
-        <Nav href link="https://instagram.com/itsuwaru">
+        <Nav page="instagram" href link="https://instagram.com/itsuwaru">
           instagram
         </Nav>
       </ul>
