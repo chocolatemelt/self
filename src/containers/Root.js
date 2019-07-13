@@ -4,14 +4,17 @@ import { Provider } from 'react-redux';
 
 import Main from './Main';
 
-const Root = props => (
-  <Provider store={props.store}>
-    <Main />
-  </Provider>
-);
+const Root = props => {
+  const { store } = props;
+  return (
+    <Provider store={store}>
+      <Main />
+    </Provider>
+  );
+};
 
 Root.propTypes = {
-  store: PropTypes.object.isRequired,
+  store: PropTypes.shape({}).isRequired,
 };
 
 export default Root;

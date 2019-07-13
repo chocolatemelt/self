@@ -21,6 +21,7 @@
     "prettier/prettier": ["error"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
+    "react/destructuring-assignment": [2, "always"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-indent": [1, 2],
     "react/jsx-indent-props": [1, 2],
