@@ -15,7 +15,7 @@ body {
 }
 
 .main {
-  width: 10vw;
+  width: 10em;
   position: fixed;
   top: 1em;
   left: 1em;
@@ -44,14 +44,14 @@ body {
   text-decoration: underline;
 }
 
-.hover {
-  width: 20em;
-  position: fixed;
-  top: 3em;
-  left: 10em;
+.page {
+  width: 40em;
+  position: absolute;
+  top: 2em;
+  left: 11em;
 }
 
-.hover p {
+.page p {
   width: 20em;
 }
 
