@@ -1,7 +1,17 @@
 body {
   font-size: 10pt;
-  font-family: "Courier New", Courier, Monaco, monospace;
+  font-family: 'Courier New', Courier, Monaco, monospace;
   line-height: 1.36364em;
+}
+
+.lead {
+  color: #000;
+  text-decoration: none;
+}
+
+.lead:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .main {
