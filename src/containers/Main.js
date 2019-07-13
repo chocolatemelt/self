@@ -12,30 +12,32 @@ import Who from './pages/Who';
 
 const Main = ({ location }) => (
   <>
-    <h1>
-      <Link className="lead" to="/who">
-        hey, i'm kevin
-      </Link>
-    </h1>
-    <ul>
-      <Nav link="/projects">projects</Nav>
-      <Nav link="/drawings">drawings</Nav>
-      <Nav link="/compositions">compositions</Nav>
-    </ul>
-    <ul>
-      <Nav href link="https://github.com/chocolatemelt">
-        github
-      </Nav>
-      <Nav href link="https://instagram.com/itsuwaru">
-        instagram
-      </Nav>
-    </ul>
+    <div className="side">
+      <h1>
+        <Link className="lead" to="/who">
+          hey, i'm kevin
+        </Link>
+      </h1>
+      <ul>
+        <Nav link="/projects">projects</Nav>
+        <Nav link="/drawings">drawings</Nav>
+        <Nav link="/compositions">compositions</Nav>
+      </ul>
+      <ul>
+        <Nav href link="https://github.com/chocolatemelt">
+          github
+        </Nav>
+        <Nav href link="https://instagram.com/itsuwaru">
+          instagram
+        </Nav>
+      </ul>
 
-    {location.pathname !== '/' && (
-      <Link className="x" to="/">
-        [x]
-      </Link>
-    )}
+      {location.pathname !== '/' && (
+        <Link className="x" to="/">
+          [x]
+        </Link>
+      )}
+    </div>
 
     <TransitionGroup>
       <CSSTransition key={location.key} timeout={100} classNames="fade">
