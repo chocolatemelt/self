@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import CVHead from '../../components/CVHead';
 
-const CurriculumVitae = ({ history }) => (
+const CurriculumVitae = () => (
   <div className="page cv">
     <h2 className="cvname">Kevin Zhang</h2>
     <h3>Experience</h3>
@@ -119,9 +120,7 @@ const CurriculumVitae = ({ history }) => (
       </ul>
     </div>
     <p className="br">
-      <button className="a" type="button" onClick={() => history.goBack()}>
-        back
-      </button>
+      <Link to="/who">back</Link>
     </p>
   </div>
 );
