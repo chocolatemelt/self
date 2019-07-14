@@ -30,7 +30,7 @@ button.a:hover,
 }
 
 button.a {
-  height: 1.15em;
+  height: 1em;
   background: none;
   color: inherit;
   border: none;
@@ -38,6 +38,7 @@ button.a {
   font: inherit;
   cursor: pointer;
   text-decoration: underline;
+  line-height: 1em;
 }
 
 /* main page */
