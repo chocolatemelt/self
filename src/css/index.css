@@ -72,7 +72,7 @@ button.a {
 }
 
 .page {
-  width: 40em;
+  max-width: 40em;
   position: absolute;
   top: 3em;
   left: 11em;
@@ -94,7 +94,7 @@ p.br {
 
 /* who */
 .who {
-  width: 20em;
+  max-width: 20em;
 }
 
 /* cv */
@@ -141,6 +141,11 @@ p.br {
 
 .cv .right {
   float: right;
+}
+
+/* case studies */
+.case {
+  margin-bottom: 3em;
 }
 
 /* transitions */
