@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import LinkReducer from './Link';
 
 const rootReducer = combineReducers({
-  page: LinkReducer,
+  link: LinkReducer,
 });
 
 export default rootReducer;
