@@ -51,26 +51,6 @@ button.a {
   margin-bottom: 1em;
 }
 
-#main ul {
-  margin-bottom: 1em;
-}
-
-#main li ul {
-  margin-bottom: 0;
-}
-
-#main ul li a {
-  color: #000;
-  text-decoration: underline;
-}
-
-#main ul li a:hover,
-.link:hover {
-  color: #fff;
-  background-color: #000;
-  text-decoration: underline;
-}
-
 .page {
   max-width: 40em;
   position: absolute;
@@ -90,6 +70,23 @@ p.br {
 /* side */
 .side {
   position: fixed;
+}
+
+.side ul {
+  margin-bottom: 1em;
+}
+
+.side li ul {
+  margin-bottom: 0;
+}
+
+.expand {
+  height: 100%;
+}
+
+.compress {
+  height: 0;
+  overflow: hidden;
 }
 
 /* who */

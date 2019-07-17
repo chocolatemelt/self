@@ -3,6 +3,7 @@ import { Link, Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import PropTypes from 'prop-types';
 
+import Drawer from '../components/Drawer';
 import Nav from '../components/Nav';
 import Index from './pages/Index';
 import Projects from './pages/Projects';
@@ -23,9 +24,12 @@ const Main = ({ location }) => (
         </Link>
       </h1>
       <ul>
-        <Nav page="projects" link="/projects">
-          projects
-        </Nav>
+        <Nav page="projects">projects</Nav>
+        <li>
+          <Drawer page="projects" {...location}>
+            <li>hi</li>
+          </Drawer>
+        </li>
         <Nav page="drawings" link="/drawings">
           drawings
         </Nav>
@@ -34,10 +38,10 @@ const Main = ({ location }) => (
         </Nav>
       </ul>
       <ul>
-        <Nav page="github" href link="https://github.com/chocolatemelt">
+        <Nav page="github" href="https://github.com/chocolatemelt">
           github
         </Nav>
-        <Nav page="instagram" href link="https://instagram.com/itsuwaru">
+        <Nav page="instagram" href="https://instagram.com/itsuwaru">
           instagram
         </Nav>
       </ul>
