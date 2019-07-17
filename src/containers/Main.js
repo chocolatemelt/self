@@ -31,7 +31,7 @@ const Main = ({ location }) => (
         <li>
           <Drawer page="projects">
             <Nav page="projects">
-              <Link to="/p/here">portfolio</Link>
+              <Link to="/p/self">portfolio</Link>
             </Nav>
             <Nav page="projects">
               <Link to="/p/kadopon">kadopon</Link>
@@ -76,7 +76,7 @@ const Main = ({ location }) => (
           <Route path="/who" component={Who} />
           <Route path="/cv" component={CurriculumVitae} />
           <Route path="/whereami" component={Where} />
-          <Route path="/(p|d|c)" component={RedirectIndex} />
+          <Route path="/(p|d|c)" exact component={RedirectIndex} />
           <Route path="*" component={Redirect404} />
         </Switch>
       </CSSTransition>

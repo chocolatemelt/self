@@ -5,9 +5,7 @@ import Case from '../../../components/Case';
 const ProjectSelf = () => (
   <div className="page">
     <Case>
-      <h2>
-        kadopon (<a href="https://github.com/chocolatemelt/kadopon-server">github</a>)
-      </h2>
+      <h2>self (psst... you're on it)</h2>
       <h3>ambitious arpg / tabletop crossover</h3>
       <p className="br">
         inspired by a wii cult classic,{' '}
