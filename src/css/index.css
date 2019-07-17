@@ -14,6 +14,14 @@ a {
   text-decoration: underline;
 }
 
+a,
+button[type='button'],
+button[type='button']:focus,
+button[type='button']::-moz-focus-inner {
+  border: 0;
+  outline: none;
+}
+
 .lead,
 .x {
   color: #000;
@@ -80,13 +88,28 @@ p.br {
   margin-bottom: 0;
 }
 
-.expand {
-  height: 100%;
+/* navigation drawer */
+.drawer {
+  margin-left: 1em;
+  overflow: hidden;
 }
 
-.compress {
-  height: 0;
-  overflow: hidden;
+.drawer.expand {
+  max-height: 10em;
+  -webkit-transition: 200ms ease-in-out;
+  -moz-transition: 200ms ease-in-out;
+  -ms-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.drawer.compress {
+  max-height: 0em;
+  -webkit-transition: 200ms ease-in-out;
+  -moz-transition: 200ms ease-in-out;
+  -ms-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 /* who */
@@ -152,6 +175,10 @@ p.br {
 
 .fade-enter-active {
   opacity: 1;
+  -webkit-transition: opacity 100ms ease-in;
+  -moz-transition: opacity 100ms ease-in;
+  -ms-transition: opacity 100ms ease-in;
+  -o-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
 }
 
@@ -161,5 +188,9 @@ p.br {
 
 .fade-exit-active {
   opacity: 0;
+  -webkit-transition: opacity 100ms ease-in;
+  -moz-transition: opacity 100ms ease-in;
+  -ms-transition: opacity 100ms ease-in;
+  -o-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
 }
