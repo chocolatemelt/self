@@ -14,7 +14,7 @@ const Who = () => (
     <p className="br">come say hi:</p>
     <p>hello [at] kevinzha.ng</p>
     <p>
-      <a href="/Kevin_Zhang_Résumé.pdf">résumé</a> | <Link to="/cv">cv</Link>
+      <a href="/raw/Kevin_Zhang_Résumé.pdf">résumé</a> | <Link to="/cv">cv</Link>
     </p>
   </div>
 );
