@@ -3,6 +3,7 @@ import { CLICK_LINK, HOVER_LINK } from '../actions/Link';
 const LinkReducer = (
   state = {
     active: '',
+    hover: '',
   },
   action
 ) => {
@@ -10,7 +11,7 @@ const LinkReducer = (
     case CLICK_LINK:
       return {
         ...state,
-        active: action.page !== state.active ? action.page : '',
+        active: action.page,
       };
     case HOVER_LINK:
       return {

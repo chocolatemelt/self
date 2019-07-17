@@ -7,7 +7,6 @@ class Drawer extends Component {
   static propTypes = {
     children: PropTypes.node,
     page: PropTypes.string.isRequired,
-    pathname: PropTypes.string.isRequired,
     link: PropTypes.shape({
       active: PropTypes.string,
     }).isRequired,
@@ -16,7 +15,7 @@ class Drawer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: props.pathname.substring(1) === props.page,
+      expanded: props.link.active === props.page,
     };
   }
 
