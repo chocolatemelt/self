@@ -20,15 +20,14 @@ const Projects = () => (
       </p>
       <p className="br">
         the concept of kadopon is "abyss"—an endlessly descending dungeon, replete with all the
-        hallmarks of an rpg. the abyss is split up into various unique "layers", all with their own
-        fauna and flora. players descending into the abyss are not necessarily all allies, and the
-        narrative is driven by the players and their actions.
+        hallmarks of an rpg. the abyss is defined by "layers," each described by its own unique
+        environment and ecology. the core thematic revolves around player interaction: choosing to
+        remain unopinionated about the tools provided.
       </p>
       <p className="br">
         kadopon is intended to be a server-client network model, targeting browsers and possibly
-        desktop clients. the server is built on c++ for performance and the wide array of
-        established libraries. message queues are handled by{' '}
-        <a href="http://czmq.zeromq.org/">czmq</a>. the entity-component system is primarily{' '}
+        desktop clients. the server is built primarily on c++. message queues are handled by{' '}
+        <a href="http://czmq.zeromq.org/">czmq</a>. the entity-component system is managed by{' '}
         <a href="https://github.com/skypjack/entt">entt</a>, a design choice made due to the
         complexity of the game mechanics. build and deployment run on{' '}
         <a href="https://cmake.org/">cmake</a> and <a href="https://www.docker.com/">docker</a>.
@@ -36,7 +35,8 @@ const Projects = () => (
     </Case>
     <Case>
       <h2>
-        yuna (<a href="https://github.com/chocolatemelt/yuna">github</a>)
+        yuna (<a href="https://github.com/chocolatemelt/yuna">github</a>,{' '}
+        <a href="https://nisemo.no/yuna/">ex</a>)
       </h2>
       <h3>epic 7 stat and damage calculator</h3>
       <p className="br">
@@ -48,8 +48,9 @@ const Projects = () => (
       </p>
       <p className="br">
         yuna is built with{' '}
-        <a href="https://facebook.github.io/create-react-app/">create-react-app</a>, and uses redux
-        to handle state changes. it is no longer under active development.
+        <a href="https://facebook.github.io/create-react-app/">create-react-app</a> and{' '}
+        <a href="https://github.com/palantir/blueprint">palantir/blueprint</a>, and uses redux to
+        handle state changes. it is no longer under active development.
       </p>
     </Case>
     <Case>
