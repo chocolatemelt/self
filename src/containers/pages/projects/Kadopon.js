@@ -13,10 +13,9 @@ const ProjectKadopon = () => (
         inspired by a wii cult classic,{' '}
         <a href="https://en.wikipedia.org/wiki/Dokapon_Kingdom">dokapon kingdom</a>, i set out to
         create a unique browser experience drawing heavily on the idea of "player-defined
-        narratives." i also wanted to craft a more strategic combat system, drawing from the
-        defining arpg games of our time,{' '}
-        <a href="https://www.pathofexile.com/game">path of exile</a> and{' '}
-        <a href="https://en.wikipedia.org/wiki/Diablo_(series)">diablo</a>.
+        narratives." i also wanted to craft a more strategic combat system, drawing inspiration from
+        the genre-defining arpg games <a href="https://www.pathofexile.com/game">path of exile</a>{' '}
+        and <a href="https://en.wikipedia.org/wiki/Diablo_(series)">diablo</a>.
       </p>
       <p className="br">
         the concept of kadopon is "abyss"—an endlessly descending dungeon, replete with all the
