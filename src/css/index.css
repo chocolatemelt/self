@@ -49,6 +49,10 @@ button.a {
   line-height: 1em;
 }
 
+.br {
+  margin-top: 1em;
+}
+
 /* main page */
 #main {
   margin-top: 1em;
@@ -59,6 +63,10 @@ button.a {
   margin-bottom: 1em;
 }
 
+.mobile-hamburger {
+  display: none;
+}
+
 .page {
   max-width: 40em;
   position: absolute;
@@ -67,12 +75,11 @@ button.a {
   padding-bottom: 3em;
 }
 
-.br {
-  margin-top: 1em;
-}
-
-.hide {
-  display: none;
+.hi {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
 
 /* side */
@@ -198,4 +205,54 @@ button.a {
   -ms-transition: opacity 100ms ease-in;
   -o-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
+}
+
+@media screen and (max-width: 767px) {
+  .side h1,
+  .mobile-hamburger {
+    position: fixed;
+    z-index: 200;
+  }
+
+  .mobile-hamburger {
+    display: block;
+    margin-left: 9em;
+  }
+
+  .links.hide {
+    display: none;
+  }
+
+  .links.show {
+    position: fixed;
+    top: 0;
+    padding-top: 3em;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: #fff;
+    z-index: 100;
+    line-height: 2em;
+  }
+
+  .x {
+    text-decoration: underline;
+  }
+
+  .page {
+    max-width: 90vw;
+    left: 1em;
+    margin-left: 0;
+    z-index: -1;
+  }
+
+  .page.mobile-center {
+    width: 90vw;
+    left: 50%;
+    margin-left: -45vw;
+  }
+
+  .cv .cvname {
+    margin-top: 0;
+  }
 }
