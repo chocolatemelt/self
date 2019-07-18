@@ -12,6 +12,8 @@ import CurriculumVitae from './pages/CurriculumVitae';
 import Where from './pages/Where';
 import ProjectKadopon from './pages/projects/Kadopon';
 import ProjectSelf from './pages/projects/Self';
+import DrawingsAssorted from './pages/drawings/DrawingsAssorted';
+import CompBranding from './pages/compositions/CompBranding';
 
 const RedirectIndex = () => <Redirect to="/" />;
 const Redirect404 = () => <Redirect to="/whereami" />;
@@ -31,7 +33,7 @@ const Main = ({ location }) => (
         <li>
           <Drawer page="projects">
             <Nav page="projects">
-              <Link to="/p/self">portfolio</Link>
+              <Link to="/p/self">self</Link>
             </Nav>
             <Nav page="projects">
               <Link to="/p/kadopon">kadopon</Link>
@@ -41,13 +43,17 @@ const Main = ({ location }) => (
         <DrawerLink page="drawings">drawings</DrawerLink>
         <li>
           <Drawer page="drawings">
-            <Nav page="projects">drawings</Nav>
+            <Nav page="drawings">
+              <Link to="/d/misc">assorted sketches</Link>
+            </Nav>
           </Drawer>
         </li>
         <DrawerLink page="compositions">compositions</DrawerLink>
         <li>
           <Drawer page="compositions">
-            <Nav page="projects">drawings</Nav>
+            <Nav page="compositions">
+              <Link to="/c/branding">branding</Link>
+            </Nav>
           </Drawer>
         </li>
       </ul>
@@ -73,6 +79,8 @@ const Main = ({ location }) => (
           <Route path="/" exact component={Index} />
           <Route path="/p/kadopon" component={ProjectKadopon} />
           <Route path="/p/self" component={ProjectSelf} />
+          <Route path="/d/misc" component={DrawingsAssorted} />
+          <Route path="/c/branding" component={CompBranding} />
           <Route path="/who" component={Who} />
           <Route path="/cv" component={CurriculumVitae} />
           <Route path="/whereami" component={Where} />
