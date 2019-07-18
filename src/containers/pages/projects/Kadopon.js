@@ -24,11 +24,10 @@ const ProjectKadopon = () => (
         remain unopinionated about the tools provided.
       </p>
       <p className="br">
-        kadopon is intended to be a server-client network model, targeting browsers and possibly
-        desktop clients. the server is built primarily on c++. message queues are handled by{' '}
-        <a href="http://czmq.zeromq.org/">czmq</a>. the entity-component system is managed by{' '}
-        <a href="https://github.com/skypjack/entt">entt</a>, a design choice made due to the
-        complexity of the game mechanics. build and deployment run on{' '}
+        kadopon is designed as a client-server network model, targeting browsers and possibly
+        desktop clients. the server is built primarily on c++: message queues are handled by{' '}
+        <a href="http://czmq.zeromq.org/">czmq</a>, the entity-component system is managed by{' '}
+        <a href="https://github.com/skypjack/entt">entt</a>, and ci/cd run on{' '}
         <a href="https://cmake.org/">cmake</a> and <a href="https://www.docker.com/">docker</a>.
       </p>
     </Case>
