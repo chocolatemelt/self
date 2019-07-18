@@ -1,8 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link, Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import PropTypes from 'prop-types';
+import className from 'classnames';
 
+import { openSide, closeSide } from '../actions/Link';
 import Drawer from '../components/Drawer';
 import DrawerLink from '../components/DrawerLink';
 import Nav from '../components/Nav';
@@ -18,7 +21,15 @@ import CompBranding from './pages/compositions/CompBranding';
 const RedirectIndex = () => <Redirect to="/" />;
 const Redirect404 = () => <Redirect to="/whereami" />;
 
-const Main = ({ location }) => (
+const onClick = (opened, dispatch) => {
+  if (opened) {
+    dispatch(closeSide());
+  } else {
+    dispatch(openSide());
+  }
+};
+
+const Main = ({ dispatch, location, link }) => (
   <>
     <div className="side">
       <h1>
@@ -26,51 +37,63 @@ const Main = ({ location }) => (
           hey, i'm kevin
         </Link>
       </h1>
-      <ul>
-        <Nav page="projects">
-          <DrawerLink page="projects">projects</DrawerLink>
-        </Nav>
-        <li>
-          <Drawer page="projects">
-            <Nav page="projects">
-              <Link to="/p/self">self</Link>
-            </Nav>
-            <Nav page="projects">
-              <Link to="/p/kadopon">kadopon</Link>
-            </Nav>
-          </Drawer>
-        </li>
-        <DrawerLink page="drawings">drawings</DrawerLink>
-        <li>
-          <Drawer page="drawings">
-            <Nav page="drawings">
-              <Link to="/d/misc">assorted sketches</Link>
-            </Nav>
-          </Drawer>
-        </li>
-        <DrawerLink page="compositions">compositions</DrawerLink>
-        <li>
-          <Drawer page="compositions">
-            <Nav page="compositions">
-              <Link to="/c/branding">branding</Link>
-            </Nav>
-          </Drawer>
-        </li>
-      </ul>
-      <ul>
-        <Nav page="github">
-          <a href="https://github.com/chocolatemelt">github</a>
-        </Nav>
-        <Nav page="instagram">
-          <a href="https://instagram.com/itsuwaru">instagram</a>
-        </Nav>
-      </ul>
+      <div className="mobile-hamburger">
+        <button
+          type="button"
+          className="a"
+          onClick={() => onClick(link.opened, dispatch)}
+          onKeyDown={() => onClick(link.opened, dispatch)}
+        >
+          {link.opened ? '<<' : '>>'}
+        </button>
+      </div>
+      <div className={className(link.opened ? 'show' : 'hide', 'links')}>
+        <ul>
+          <Nav page="projects">
+            <DrawerLink page="projects">projects</DrawerLink>
+          </Nav>
+          <li>
+            <Drawer page="projects">
+              <Nav page="projects">
+                <Link to="/p/self">self</Link>
+              </Nav>
+              <Nav page="projects">
+                <Link to="/p/kadopon">kadopon</Link>
+              </Nav>
+            </Drawer>
+          </li>
+          <DrawerLink page="drawings">drawings</DrawerLink>
+          <li>
+            <Drawer page="drawings">
+              <Nav page="drawings">
+                <Link to="/d/misc">assorted sketches</Link>
+              </Nav>
+            </Drawer>
+          </li>
+          <DrawerLink page="compositions">compositions</DrawerLink>
+          <li>
+            <Drawer page="compositions">
+              <Nav page="compositions">
+                <Link to="/c/branding">branding</Link>
+              </Nav>
+            </Drawer>
+          </li>
+        </ul>
+        <ul>
+          <Nav page="github">
+            <a href="https://github.com/chocolatemelt">github</a>
+          </Nav>
+          <Nav page="instagram">
+            <a href="https://instagram.com/itsuwaru">instagram</a>
+          </Nav>
+        </ul>
 
-      {location.pathname !== '/' && (
-        <Link className="x" to="/">
-          [x]
-        </Link>
-      )}
+        {location.pathname !== '/' && (
+          <Link className="x" to="/">
+            {link.opened ? 'home' : '[x]'}
+          </Link>
+        )}
+      </div>
     </div>
 
     <TransitionGroup>
@@ -93,12 +116,20 @@ const Main = ({ location }) => (
 );
 
 Main.propTypes = {
+  dispatch: PropTypes.func.isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string,
     search: PropTypes.string,
     hash: PropTypes.string,
     key: PropTypes.string,
   }),
+  link: PropTypes.shape({
+    opened: PropTypes.bool.isRequired,
+  }).isRequired,
 };
 
-export default withRouter(Main);
+const mapStateToProps = state => ({
+  link: state.link,
+});
+
+export default withRouter(connect(mapStateToProps)(Main));
