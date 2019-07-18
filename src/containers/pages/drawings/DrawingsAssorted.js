@@ -3,7 +3,7 @@ import React from 'react';
 import Case from '../../../components/Case';
 
 const DrawingsAssorted = () => (
-  <div className="page">
+  <div className="page mobile-center">
     <Case>
       <img src="/raw/d/misc/elisanne.png" alt="elisanne portrait" />
       <img src="/raw/d/misc/akali.png" alt="kda akali profile sketch" />

@@ -3,7 +3,7 @@ import React from 'react';
 import Case from '../../../components/Case';
 
 const CompBranding = () => (
-  <div className="page">
+  <div className="page mobile-center">
     <Case>
       <img src="/raw/c/branding/splash.png" alt="branding splash" />
       <h2>self-branding study, 2017</h2>
