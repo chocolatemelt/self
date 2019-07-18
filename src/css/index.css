@@ -168,6 +168,11 @@ button.a {
   margin-bottom: 3em;
 }
 
+.case img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 /* transitions */
 .fade-enter {
   opacity: 0;
