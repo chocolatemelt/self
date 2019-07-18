@@ -8,7 +8,7 @@ const CurriculumVitae = () => (
   <div className="page cv">
     <h2 className="cvname">Kevin Zhang</h2>
     <h3>Experience</h3>
-    <div className="i-1">
+    <div className="i-1 cventry">
       <CVHead left="Federated Wireless" right="2017-2019" />
       <p>Frontend and software developer on the cloud engineering team.</p>
       <ul className="i-2">
@@ -38,7 +38,7 @@ const CurriculumVitae = () => (
         <li>Handled a full deployment of all services and documented the process for newcomers.</li>
       </ul>
     </div>
-    <div className="i-1">
+    <div className="i-1 cventry">
       <CVHead left="Kronos Incorporated" right="Summer 2016" />
       <p>Software engineer intern under Rishi Kurra.</p>
       <ul className="i-2">
@@ -56,7 +56,7 @@ const CurriculumVitae = () => (
         </li>
       </ul>
     </div>
-    <div className="i-1">
+    <div className="i-1 cventry">
       <CVHead left="Federated Wireless" right="Summer 2015" />
       <p>Software engineer intern under James Ni.</p>
       <ul className="i-2">
@@ -75,7 +75,7 @@ const CurriculumVitae = () => (
       </ul>
     </div>
     <h3>Education</h3>
-    <div className="i-1">
+    <div className="i-1 cventry">
       <CVHead left="Rensselaer Polytechnic Institute" right="2014-2017" />
       <p>B.S. in Computer Science</p>
       <ul className="i-2">
@@ -90,7 +90,7 @@ const CurriculumVitae = () => (
       </ul>
     </div>
     <h3>Skills</h3>
-    <div className="i-1">
+    <div className="i-1 cventry">
       <ul className="i-1">
         <li>C++14</li>
         <li>JS (ES2015)</li>
@@ -119,7 +119,7 @@ const CurriculumVitae = () => (
         <li>Clip Studio Paint（クリスタ）</li>
       </ul>
     </div>
-    <p className="br">
+    <p>
       <Link to="/who">back</Link>
     </p>
   </div>

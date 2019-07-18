@@ -131,7 +131,8 @@ button.a {
 }
 
 .cv .cvname {
-  margin-top: 0;
+  margin-top: -2em;
+  margin-bottom: 1em;
   border: none;
 }
 
@@ -139,12 +140,6 @@ button.a {
   content: '';
   clear: both;
   display: table;
-}
-
-.cv h1,
-.cv h2,
-.cv h3 {
-  margin-top: 1em;
 }
 
 .cv .i-1 {
@@ -161,6 +156,10 @@ button.a {
 
 .cv .right {
   float: right;
+}
+
+.cventry {
+  margin-bottom: 1em;
 }
 
 /* case studies */
