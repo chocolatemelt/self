@@ -74,7 +74,7 @@ const Main = ({ location }) => (
     </div>
 
     <TransitionGroup>
-      <CSSTransition key={location.key} timeout={100} classNames="fade">
+      <CSSTransition key={location.key} timeout={{ enter: 100, exit: 100 }} classNames="fade">
         <Switch location={location}>
           <Route path="/" exact component={Index} />
           <Route path="/p/kadopon" component={ProjectKadopon} />

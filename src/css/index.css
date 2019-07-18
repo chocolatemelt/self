@@ -96,11 +96,11 @@ button.a {
 
 .drawer.expand {
   max-height: 10em;
-  -webkit-transition: 200ms ease-in-out;
-  -moz-transition: 200ms ease-in-out;
-  -ms-transition: 200ms ease-in-out;
-  -o-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out 0.1s;
+  -moz-transition: 200ms ease-in-out 0.1s;
+  -ms-transition: 200ms ease-in-out 0.1s;
+  -o-transition: 200ms ease-in-out 0.1s;
+  transition: 200ms ease-in-out 0.1s;
 }
 
 .drawer.compress {
@@ -180,11 +180,12 @@ button.a {
 
 .fade-enter-active {
   opacity: 1;
-  -webkit-transition: opacity 100ms ease-in;
-  -moz-transition: opacity 100ms ease-in;
-  -ms-transition: opacity 100ms ease-in;
-  -o-transition: opacity 100ms ease-in;
-  transition: opacity 100ms ease-in;
+  /* short delay to hide scrollTo */
+  -webkit-transition: opacity 100ms ease-in 0.1s;
+  -moz-transition: opacity 100ms ease-in 0.1s;
+  -ms-transition: opacity 100ms ease-in 0.1s;
+  -o-transition: opacity 100ms ease-in 0.1s;
+  transition: opacity 500ms ease-in 0.1s;
 }
 
 .fade-exit {
