@@ -61,15 +61,14 @@ const CurriculumVitae = () => (
       <p>Software engineer intern under James Ni.</p>
       <ul className="i-2">
         <li>
-          Performed large-scale class refactoring, cutting code down by around 3MB and making it
-          more coherent and flexible.
+          Refactored the entire modules and configuration components, focusing on compatibility and flexbility.
         </li>
         <li>
           Developed an extensible framework to configure and communicate with SAS through an
           external client using RabbitMQ and JSON-RPC.
         </li>
         <li>
-          Developed a command-line interface client to SAS with the Apache CLI library and RAbbitMQ,
+          Developed a command-line interface client to SAS with the Apache CLI library and RabbitMQ,
           allowing an end user to configure SAS without requiring direct access to deployment.
         </li>
       </ul>
