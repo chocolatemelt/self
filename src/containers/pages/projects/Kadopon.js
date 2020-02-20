@@ -1,14 +1,21 @@
 import React from 'react';
 
 import Case from '../../../components/Case';
+import CaseHead from '../../../components/CaseHead';
 
 const ProjectKadopon = () => (
   <div className="page">
     <Case>
-      <h2>
-        kadopon (<a href="https://github.com/chocolatemelt/kadopon-server">github</a>)
-      </h2>
-      <h3>ambitious arpg / tabletop crossover</h3>
+      <CaseHead
+        title="kadopon"
+        sibling={
+          <>
+            (<a href="https://github.com/chocolatemelt/kadopon-server">github</a>)
+          </>
+        }
+        subheading="ambitious arpg / tabletop crossover"
+        comma={false}
+      />
       <p className="br">
         inspired by a wii cult classic,{' '}
         <a href="https://en.wikipedia.org/wiki/Dokapon_Kingdom">dokapon kingdom</a>, i set out to

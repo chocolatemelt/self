@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Case from '../../../components/Case';
+import CaseHead from '../../../components/CaseHead';
 
 const ProjectSelf = () => (
   <div className="page">
     <Case>
-      <h2>self—</h2>
-      <h3>the personal portfolio</h3>
+      <CaseHead title="self—" subheading="the personal portfolio" />
       <p className="br">
         one of my biggest challenges is building a personal portfolio. never satisfied, it is always
         in a state of "work-in-progress." the result you see now is the present iteration—a snapshot

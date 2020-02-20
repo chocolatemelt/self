@@ -1,15 +1,13 @@
 import React from 'react';
 
 import Case from '../../../components/Case';
+import CaseHead from '../../../components/CaseHead';
 
 const DrawingsAssorted = () => (
   <div className="page mobile-center">
     <Case>
       <img src="/raw/d/2019/ezelith.png" alt="ezelith" />
-      <h2>
-        <i>ezelith</i>, 2019
-      </h2>
-      <h3>procreate</h3>
+      <CaseHead title="ezelith" sibling="2019" subheading="procreate" />
       <p className="br">
         my first <em>__somewhat?__</em> completed digital painting. as a once-avid player of the
         game this character is from, <em>dragalia lost</em>, i found her character design to be

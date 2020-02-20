@@ -1,13 +1,17 @@
 import React from 'react';
 
 import Case from '../../../components/Case';
+import CaseHead from '../../../components/CaseHead';
 
 const CompBranding = () => (
   <div className="page mobile-center">
     <Case>
       <img src="/raw/c/branding/splash.png" alt="branding splash" />
-      <h2>self-branding study, 2017</h2>
-      <h3>rensselaer polytechnic institute</h3>
+      <CaseHead
+        title="self-branding study"
+        sibling="2017"
+        subheading="rensselaer polytechnic institute"
+      />
       <p className="br">
         a semester-end study on self-branding. focused on a strong identity around Futura's capital
         letter glyph set. Interstate was used as a secondary font to complement the sharp terminals.
