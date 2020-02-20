@@ -16,6 +16,7 @@ import Where from './pages/Where';
 import ProjectKadopon from './pages/projects/Kadopon';
 import ProjectSelf from './pages/projects/Self';
 import DrawingsAssorted from './pages/drawings/DrawingsAssorted';
+import Ezelith2019 from './pages/drawings/Ezelith2019';
 import CompBranding from './pages/compositions/CompBranding';
 
 const RedirectIndex = () => <Redirect to="/" />;
@@ -66,6 +67,9 @@ const Main = ({ dispatch, location, link }) => (
           <li>
             <Drawer page="drawings">
               <Nav page="drawings">
+                <Link to="/d/ezelith">ezelith</Link>
+              </Nav>
+              <Nav page="drawings">
                 <Link to="/d/misc">assorted sketches</Link>
               </Nav>
             </Drawer>
@@ -103,6 +107,7 @@ const Main = ({ dispatch, location, link }) => (
           <Route path="/p/kadopon" component={ProjectKadopon} />
           <Route path="/p/self" component={ProjectSelf} />
           <Route path="/d/misc" component={DrawingsAssorted} />
+          <Route path="/d/ezelith" component={Ezelith2019} />
           <Route path="/c/branding" component={CompBranding} />
           <Route path="/who" component={Who} />
           <Route path="/cv" component={CurriculumVitae} />

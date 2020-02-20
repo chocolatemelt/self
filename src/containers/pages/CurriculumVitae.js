@@ -9,6 +9,14 @@ const CurriculumVitae = () => (
     <h2 className="cvname">Kevin Zhang</h2>
     <h3>Experience</h3>
     <div className="i-1 cventry">
+      <CVHead left="HubSpot" right="2019-present" />
+      <p>Frontend developer on the Customer Relationship Management (CRM) team.</p>
+      <ul className="i-2">
+        <li>Helped develop key deliverables in table and board redesign.</li>
+        <li>Developed shepherding tour for table and board redesign.</li>
+      </ul>
+    </div>
+    <div className="i-1 cventry">
       <CVHead left="Federated Wireless" right="2017-2019" />
       <p>Frontend and software developer on the cloud engineering team.</p>
       <ul className="i-2">
@@ -61,7 +69,8 @@ const CurriculumVitae = () => (
       <p>Software engineer intern under James Ni.</p>
       <ul className="i-2">
         <li>
-          Refactored the entire modules and configuration components, focusing on compatibility and flexbility.
+          Refactored the entire modules and configuration components, focusing on compatibility and
+          flexbility.
         </li>
         <li>
           Developed an extensible framework to configure and communicate with SAS through an
