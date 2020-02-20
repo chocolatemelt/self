@@ -15,6 +15,7 @@ import CurriculumVitae from './pages/CurriculumVitae';
 import Where from './pages/Where';
 import ProjectKadopon from './pages/projects/Kadopon';
 import ProjectSelf from './pages/projects/Self';
+import Notte from './pages/projects/Notte';
 import DrawingsAssorted from './pages/drawings/DrawingsAssorted';
 import Ezelith2019 from './pages/drawings/Ezelith2019';
 import CompBranding from './pages/compositions/CompBranding';
@@ -57,6 +58,9 @@ const Main = ({ dispatch, location, link }) => (
             <Drawer page="projects">
               <Nav page="projects">
                 <Link to="/p/self">self</Link>
+              </Nav>
+              <Nav page="projects">
+                <Link to="/p/notte">notte.moe</Link>
               </Nav>
               <Nav page="projects">
                 <Link to="/p/kadopon">kadopon</Link>
@@ -106,6 +110,7 @@ const Main = ({ dispatch, location, link }) => (
           <Route path="/" exact component={Index} />
           <Route path="/p/kadopon" component={ProjectKadopon} />
           <Route path="/p/self" component={ProjectSelf} />
+          <Route path="/p/notte" component={Notte} />
           <Route path="/d/misc" component={DrawingsAssorted} />
           <Route path="/d/ezelith" component={Ezelith2019} />
           <Route path="/c/branding" component={CompBranding} />
