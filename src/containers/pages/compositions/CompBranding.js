@@ -24,6 +24,12 @@ const CompBranding = () => (
         primarily on balancing the silhouette for an aesthetically interesting design.
       </p>
       <img src="/raw/c/branding/process.png" alt="business card process" />
+      <p>
+        i experimented heavily with the concept of type as an aesthetic element, and worked with the
+        raw shapes of the glyphs rather than focusing on the content of the text itself. though it
+        did garner criticism for relatively poor readability, it was a worthwhile endeavor and
+        helped me find a satisfactory balance.
+      </p>
     </Case>
   </div>
 );
