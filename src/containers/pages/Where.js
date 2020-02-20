@@ -16,7 +16,7 @@ const rng = () => bunsetsu[Math.floor(Math.random() * bunsetsu.length)];
 const Where = ({ history }) => (
   <div className="page where">
     <p>{rng()}</p>
-    <p className="br">
+    <p>
       <button className="a" type="button" onClick={() => history.goBack()}>
         back
       </button>

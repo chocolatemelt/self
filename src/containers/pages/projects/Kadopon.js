@@ -16,7 +16,7 @@ const ProjectKadopon = () => (
         subheading="ambitious arpg / tabletop crossover"
         comma={false}
       />
-      <p className="br">
+      <p>
         inspired by a wii cult classic,{' '}
         <a href="https://en.wikipedia.org/wiki/Dokapon_Kingdom">dokapon kingdom</a>, i set out to
         create a unique browser experience drawing heavily on the idea of "player-defined
@@ -24,13 +24,13 @@ const ProjectKadopon = () => (
         the genre-defining arpg games <a href="https://www.pathofexile.com/game">path of exile</a>{' '}
         and <a href="https://en.wikipedia.org/wiki/Diablo_(series)">diablo</a>.
       </p>
-      <p className="br">
+      <p>
         the concept of kadopon is "abyss"—an endlessly descending dungeon, replete with all the
         hallmarks of an rpg. the abyss is defined by "layers," each described by its own unique
         environment and ecology. the core thematic revolves around player interaction: choosing to
         remain unopinionated about the tools provided.
       </p>
-      <p className="br">
+      <p>
         kadopon is designed as a client-server network model, targeting browsers and possibly
         desktop clients. the server is built primarily on c++: message queues are handled by{' '}
         <a href="http://czmq.zeromq.org/">czmq</a>, the entity-component system is managed by{' '}

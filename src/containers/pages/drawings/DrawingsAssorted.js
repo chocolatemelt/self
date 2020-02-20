@@ -15,9 +15,7 @@ const DrawingsAssorted = () => (
         sibling="2019"
         subheading="photoshop, clip studio paint"
       />
-      <p className="br">
-        four sketches done in my free time over the course of the year, listed chronologically.
-      </p>
+      <p>four sketches done in my free time over the course of the year, listed chronologically.</p>
     </Case>
   </div>
 );

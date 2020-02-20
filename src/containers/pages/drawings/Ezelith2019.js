@@ -8,13 +8,13 @@ const DrawingsAssorted = () => (
     <Case>
       <img src="/raw/d/2019/ezelith.png" alt="ezelith" />
       <CaseHead title="ezelith" sibling="2019" subheading="procreate" />
-      <p className="br">
+      <p>
         my first <em>__somewhat?__</em> completed digital painting. as a once-avid player of the
         game this character is from, <em>dragalia lost</em>, i found her character design to be
         particularly appealing, and painted this in a hurry after she received significant buffs. i
         admit i did take some creative liberty with her hair, however.
       </p>
-      <p className="br">
+      <p>
         i drew heavily on the painting style of{' '}
         <a href="https://www.pixiv.net/en/users/83739" target="_blank" rel="noopener noreferrer">
           lack
@@ -24,7 +24,7 @@ const DrawingsAssorted = () => (
         not comfortable working with color, i chose to work with a muted monochromatic palette,
         trending ever so slightly to lilac.
       </p>
-      <p className="br">
+      <p>
         this was the last of three digital paintings i did in 2019, and the only one done on
         procreate.
       </p>

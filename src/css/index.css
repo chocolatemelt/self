@@ -49,8 +49,17 @@ button.a {
   line-height: 1em;
 }
 
-.br {
+p + p {
   margin-top: 1em;
+}
+
+.block {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.block p {
+  margin: 0;
 }
 
 /* main page */
@@ -177,6 +186,10 @@ button.a {
 
 .case img {
   margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.case .casehead {
   margin-bottom: 1em;
 }
 
