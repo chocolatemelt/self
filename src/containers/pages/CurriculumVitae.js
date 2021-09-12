@@ -10,8 +10,21 @@ const CurriculumVitae = () => (
     <h3>Experience</h3>
     <div className="i-1 cventry">
       <CVHead left="HubSpot" right="2019-present" />
-      <p>Frontend developer on the Customer Relationship Management (CRM) team.</p>
+      <p>Frontend developer on the Pipelines (Datasets) team.</p>
       <ul className="i-2">
+        <li>Developed and rolled out batch mutations for custom objects.</li>
+        <li>Developed the custom object pipeline settings page from scratch.</li>
+        <ul className="i-3">
+          <li>Managed the beta release for custom object pipeline settings.</li>
+          <li>Set up the app with fresh GraphQL endpoints using the Apollo client.</li>
+          <li>Set up legacy object type support.</li>
+        </ul>
+        <li>
+          Developed and released version 2 of the recycle bin for standard and custom objects.
+        </li>
+        <li>
+          Concluded various performance A/B tests to optimize the index page redesign for customers.
+        </li>
         <li>Helped develop key deliverables in table and board redesign.</li>
         <li>Developed shepherding tour for table and board redesign.</li>
       </ul>

@@ -167,6 +167,10 @@ p + p {
   margin-left: 2em;
 }
 
+.cv .i-3 {
+  margin-left: 3em;
+}
+
 .cv .left {
   float: left;
 }
