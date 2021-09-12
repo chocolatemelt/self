@@ -92,7 +92,7 @@ const Main = ({ dispatch, location, link }) => (
             <a href="https://github.com/chocolatemelt">github</a>
           </Nav>
           <Nav page="instagram">
-            <a href="https://instagram.com/itsuwaru">instagram</a>
+            <a href="https://instagram.com/kaigainiki">instagram</a>
           </Nav>
         </ul>
 
