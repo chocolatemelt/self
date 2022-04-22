@@ -19,6 +19,7 @@ import Notte from './pages/projects/Notte';
 import DrawingsAssorted from './pages/illustration/DrawingsAssorted';
 import Ezelith2019 from './pages/illustration/Ezelith2019';
 import Nian from './pages/illustration/Nian';
+import Illustration2021 from './pages/illustration/Illustration2021';
 import CompBranding from './pages/compositions/CompBranding';
 
 const RedirectIndex = () => <Redirect to="/" />;
@@ -37,7 +38,7 @@ const Main = ({ dispatch, location, link }) => (
     <div className="side">
       <h1>
         <Link className="lead" to="/who">
-          hey, i'm kevin
+          hey, i'm kev
         </Link>
       </h1>
       <div className="mobile-hamburger">
@@ -72,6 +73,9 @@ const Main = ({ dispatch, location, link }) => (
           <li>
             <Drawer page="illustration">
               <Nav page="illustration">
+                <Link to="/d/illustration2021">illustrations 2021</Link>
+              </Nav>
+              <Nav page="illustration">
                 <Link to="/d/nian">night shift</Link>
               </Nav>
               <Nav page="illustration">
@@ -95,8 +99,8 @@ const Main = ({ dispatch, location, link }) => (
           <Nav page="github">
             <a href="https://github.com/chocolatemelt">github</a>
           </Nav>
-          <Nav page="instagram">
-            <a href="https://instagram.com/kaigainiki">instagram</a>
+          <Nav page="artstation">
+            <a href="https://www.artstation.com/wdrftgyfjklp">artstation</a>
           </Nav>
         </ul>
 
@@ -118,6 +122,7 @@ const Main = ({ dispatch, location, link }) => (
           <Route path="/d/misc" component={DrawingsAssorted} />
           <Route path="/d/ezelith" component={Ezelith2019} />
           <Route path="/d/nian" component={Nian} />
+          <Route path="/d/illustration2021" component={Illustration2021} />
           <Route path="/c/branding" component={CompBranding} />
           <Route path="/who" component={Who} />
           <Route path="/cv" component={CurriculumVitae} />
