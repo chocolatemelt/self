@@ -16,8 +16,9 @@ import Where from './pages/Where';
 import ProjectKadopon from './pages/projects/Kadopon';
 import ProjectSelf from './pages/projects/Self';
 import Notte from './pages/projects/Notte';
-import DrawingsAssorted from './pages/drawings/DrawingsAssorted';
-import Ezelith2019 from './pages/drawings/Ezelith2019';
+import DrawingsAssorted from './pages/illustration/DrawingsAssorted';
+import Ezelith2019 from './pages/illustration/Ezelith2019';
+import Nian from './pages/illustration/Nian';
 import CompBranding from './pages/compositions/CompBranding';
 
 const RedirectIndex = () => <Redirect to="/" />;
@@ -67,13 +68,16 @@ const Main = ({ dispatch, location, link }) => (
               </Nav>
             </Drawer>
           </li>
-          <DrawerLink page="drawings">drawings</DrawerLink>
+          <DrawerLink page="illustration">illustration</DrawerLink>
           <li>
-            <Drawer page="drawings">
-              <Nav page="drawings">
+            <Drawer page="illustration">
+              <Nav page="illustration">
+                <Link to="/d/nian">night shift</Link>
+              </Nav>
+              <Nav page="illustration">
                 <Link to="/d/ezelith">ezelith</Link>
               </Nav>
-              <Nav page="drawings">
+              <Nav page="illustration">
                 <Link to="/d/misc">assorted sketches</Link>
               </Nav>
             </Drawer>
@@ -113,6 +117,7 @@ const Main = ({ dispatch, location, link }) => (
           <Route path="/p/notte" component={Notte} />
           <Route path="/d/misc" component={DrawingsAssorted} />
           <Route path="/d/ezelith" component={Ezelith2019} />
+          <Route path="/d/nian" component={Nian} />
           <Route path="/c/branding" component={CompBranding} />
           <Route path="/who" component={Who} />
           <Route path="/cv" component={CurriculumVitae} />

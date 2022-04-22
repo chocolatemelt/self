@@ -10,8 +10,14 @@ const CurriculumVitae = () => (
     <h3>Experience</h3>
     <div className="i-1 cventry">
       <CVHead left="HubSpot" right="2019-present" />
-      <p>Frontend developer on the Pipelines (Datasets) team.</p>
+      <p>Senior Software Engineer I on the Pipelines (Datasets) team.</p>
       <ul className="i-2">
+        <li>Developed and rolled out version 2 of the board card customization feature.</li>
+        <li>
+          Led group effort to revamp acceptance testing for the index and board pages, bringing pass
+          rates from 70% to above 95%.
+        </li>
+        <li>Developed lifecycle stage settings for customer and company pipelines.</li>
         <li>Developed and rolled out batch mutations for custom objects.</li>
         <li>Developed the custom object pipeline settings page from scratch.</li>
         <ul className="i-3">
@@ -19,6 +25,10 @@ const CurriculumVitae = () => (
           <li>Set up the app with fresh GraphQL endpoints using the Apollo client.</li>
           <li>Set up legacy object type support.</li>
         </ul>
+        <li>
+          Helped develop the index page redesign, a year-long effort that resulted in significant
+          performance gains for end users and cleared up archaic code.
+        </li>
         <li>
           Developed and released version 2 of the recycle bin for standard and custom objects.
         </li>
@@ -113,10 +123,14 @@ const CurriculumVitae = () => (
     <h3>Skills</h3>
     <div className="i-1 cventry">
       <ul className="i-1">
-        <li>C++14</li>
-        <li>JS (ES2015)</li>
+        <li>JS (ES6)</li>
+        <ul className="i-1">
+          <li>React</li>
+          <li>Redux</li>
+        </ul>
         <li>HTML5 & CSS3</li>
         <li>Python</li>
+        <li>C++14</li>
         <li>Java</li>
         <li>Linux</li>
         <li>
@@ -132,7 +146,6 @@ const CurriculumVitae = () => (
             <li>DynamoDB</li>
             <li>Elasticsearch</li>
             <li>Batch</li>
-            <li>boto3</li>
           </ul>
         </li>
         <li>Adobe Photoshop</li>

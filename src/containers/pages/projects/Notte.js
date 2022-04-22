@@ -30,6 +30,10 @@ const Notte = () => (
         i also host a <a href="https://notte.moe/dl-fbx/">3d model dump</a> written by my friend,
         among various other small resources.
       </p>
+      <p>
+        this project is now defunct, so none of the links work, but for historical reasons i'll keep
+        them in.
+      </p>
     </Case>
   </div>
 );
