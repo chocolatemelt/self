@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -41,7 +40,7 @@ const Main = ({ dispatch, link }) => {
       <div className="side">
         <h1>
           <Link className="lead" to="/who">
-            hey, i'm kev
+            kevin zhang
           </Link>
         </h1>
         <div className="mobile-hamburger">
@@ -100,10 +99,10 @@ const Main = ({ dispatch, link }) => {
           </ul>
           <ul>
             <Nav page="github">
-              <a href="https://github.com/chocolatemelt">github</a>
+              <a href="https://github.com/chocolatemelt" target="_blank">github</a>
             </Nav>
-            <Nav page="artstation">
-              <a href="https://www.artstation.com/wdrftgyfjklp">artstation</a>
+            <Nav page="pixiv">
+              <a href="https://www.pixiv.net/en/users/12219627" target="_blank">pixiv</a>
             </Nav>
           </ul>
 

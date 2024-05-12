@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 const bunsetsu = [
   '404',
@@ -13,28 +12,20 @@ const bunsetsu = [
 
 const rng = () => bunsetsu[Math.floor(Math.random() * bunsetsu.length)];
 
-const Where = ({ history }) => (
-  <div className="page where">
-    <p>{rng()}</p>
-    <p>
-      <button className="a" type="button" onClick={() => history.goBack()}>
-        back
-      </button>
-    </p>
-  </div>
-);
-
-Where.propTypes = {
-  history: PropTypes.shape({
-    length: PropTypes.number,
-    action: PropTypes.string,
-    location: PropTypes.shape({
-      pathname: PropTypes.string,
-      search: PropTypes.string,
-      key: PropTypes.string,
-    }),
-    goBack: PropTypes.func,
-  }).isRequired,
+const Where = () => {
+  const navigate = useNavigate();
+  return (
+    <div className="page where">
+      <p>{rng()}</p>
+      <p>
+        <button className="a" type="button" onClick={() => navigate(-1)}>
+          back
+        </button>
+      </p>
+    </div>
+  );
 };
+
+Where.propTypes = {};
 
 export default Where;

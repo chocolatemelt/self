@@ -1,9 +1,18 @@
-import React from 'react';
+import { useState } from 'react';
+import className from 'classnames';
 
-const Index = () => (
-  <div className="page">
-    <img className="hi" src="/raw/i/profile.png" alt="hi" />
-  </div>
-);
+const Index = () => {
+  const [colored, setColored] = useState(false);
+
+  const handleClick = () => {
+    setColored(!colored);
+  };
+
+  return (
+    <div className="page">
+      <div className={className('hi', colored ? 'color' : 'sketch')} onClick={handleClick}></div>
+    </div>
+  );
+};
 
 export default Index;

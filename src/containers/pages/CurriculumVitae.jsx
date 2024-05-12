@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import CVHead from '../../components/CVHead';
 
@@ -9,7 +7,36 @@ const CurriculumVitae = () => (
     <h2 className="cvname">Kevin Zhang</h2>
     <h3>Experience</h3>
     <div className="i-1 cventry">
-      <CVHead left="HubSpot" right="2019-present" />
+      <CVHead left="Riot Games" right="2021-present" />
+      <p>Senior Software Engineer on the League Client Development Efficiency Team.</p>
+      <ul className="i-2">
+        <li>Introduced Puppeteer to League Client development flows.</li>
+        <li>Trained engineers in Shanghai on League Client frontend flow, development, and debugging processes.</li>
+        <li>Tech lead and primary individual contributor on Summoner Name Removal project.</li>
+        <ul className="i-3">
+          <li>Spiked on initial player name component engineering.</li>
+          <li>Developed initial Ember player name component and associated web component.</li>
+          <li>
+            Spiked batching design to reduce lookup hits to platform APIs in certain edge cases where
+            lots of names are looked up, e.g. Ranked Ladders.
+          </li>
+          <li>Implemented player name component in large majority of the client.</li>
+          <li>Coordinated with QA engineers and QA lead to test and deliver changes to players by patch 13.23.</li>
+          <li>Managed global rolling release of all changes to each Riot Region.</li>
+        </ul>
+        <li>
+          Removed unused semantic versioning in internal plugins and build pipelines.
+          Internal plugins can't register past versions and always depend on the latest versions, so it was an
+          archaic step in developing plugins.
+        </li>
+        <li>
+          Cleaned up VNG-Garena migration project. This project concluded as I joined, but carried
+          significant tech debt with it.
+        </li>
+      </ul>
+    </div>
+    <div className="i-1 cventry">
+      <CVHead left="HubSpot" right="2019-2021" />
       <p>Senior Software Engineer I on the Pipelines (Datasets) team.</p>
       <ul className="i-2">
         <li>Developed and rolled out version 2 of the board card customization feature.</li>
@@ -26,8 +53,8 @@ const CurriculumVitae = () => (
           <li>Set up legacy object type support.</li>
         </ul>
         <li>
-          Helped develop the index page redesign, a year-long effort that resulted in significant
-          performance gains for end users and cleared up archaic code.
+          Part of the team developing the index page redesign, a year-long effort that resulted in significant
+          performance gains for end users and cleaned up archaic, difficult to navigate code.
         </li>
         <li>
           Developed and released version 2 of the recycle bin for standard and custom objects.
@@ -41,7 +68,7 @@ const CurriculumVitae = () => (
     </div>
     <div className="i-1 cventry">
       <CVHead left="Federated Wireless" right="2017-2019" />
-      <p>Frontend and software developer on the cloud engineering team.</p>
+      <p>Software Developer on the Cloud Engineering team.</p>
       <ul className="i-2">
         <li>Responsible for major frontend features on the customer-facing web portal.</li>
         <li>Developed an end-to-end testing framework using Selenium WebDriver and Grunt.</li>
@@ -123,14 +150,15 @@ const CurriculumVitae = () => (
     <h3>Skills</h3>
     <div className="i-1 cventry">
       <ul className="i-1">
-        <li>JS (ES6)</li>
+        <li>JS (ESM + CJS)</li>
         <ul className="i-1">
+          <li>Ember</li>
           <li>React</li>
           <li>Redux</li>
         </ul>
         <li>HTML5 & CSS3</li>
         <li>Python</li>
-        <li>C++14</li>
+        <li>C++</li>
         <li>Java</li>
         <li>Linux</li>
         <li>
@@ -159,17 +187,6 @@ const CurriculumVitae = () => (
   </div>
 );
 
-CurriculumVitae.propTypes = {
-  history: PropTypes.shape({
-    length: PropTypes.number,
-    action: PropTypes.string,
-    location: PropTypes.shape({
-      pathname: PropTypes.string,
-      search: PropTypes.string,
-      key: PropTypes.string,
-    }),
-    goBack: PropTypes.func,
-  }).isRequired,
-};
+CurriculumVitae.propTypes = {};
 
 export default CurriculumVitae;

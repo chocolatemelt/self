@@ -4,7 +4,7 @@
 }
 
 body {
-  font-size: 10pt;
+  font-size: 16pt;
   font-family: 'Ricty', 'Mplus 1p', 'Courier New', Courier, Monaco, monospace;
   line-height: 1.36364em;
 }
@@ -82,6 +82,7 @@ p + p {
   top: 3em;
   left: 12em;
   padding-bottom: 3em;
+  padding-right: 1em;
 }
 
 .hi {
@@ -89,7 +90,19 @@ p + p {
   position: fixed;
   right: 0;
   bottom: 0;
-  width: 256px;
+  height: 40vh;
+  max-height: 1600px;
+  width: 40vh;
+  max-width: 1600px;
+  background-size: 40vh;
+}
+
+.hi.sketch {
+  background-image: url('/raw/i/profile.png');
+}
+
+.hi.color {
+  background-image: url('/raw/i/profile-color.png');
 }
 
 /* side */
@@ -226,6 +239,16 @@ p + p {
 }
 
 @media screen and (max-width: 767px) {
+  .side {
+    background: linear-gradient(to bottom, white 40%, transparent 100%);
+    width: 100%;
+    height: 65px;
+    top: 0;
+    left: 0;
+    padding-top: 1em;
+    padding-left: 1em;
+  }
+
   .side h1,
   .mobile-hamburger {
     position: fixed;
