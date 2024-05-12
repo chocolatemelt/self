@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import PropTypes from 'prop-types';
 import className from 'classnames';
@@ -22,8 +22,8 @@ import Nian from './pages/illustration/Nian';
 import Illustration2021 from './pages/illustration/Illustration2021';
 import CompBranding from './pages/compositions/CompBranding';
 
-const RedirectIndex = () => <Redirect to="/" />;
-const Redirect404 = () => <Redirect to="/whereami" />;
+const RedirectIndex = () => <Navigate to="/" />;
+const Redirect404 = () => <Navigate to="/whereami" />;
 
 const onClick = (opened, dispatch) => {
   if (opened) {
@@ -33,123 +33,121 @@ const onClick = (opened, dispatch) => {
   }
 };
 
-const Main = ({ dispatch, location, link }) => (
-  <>
-    <div className="side">
-      <h1>
-        <Link className="lead" to="/who">
-          hey, i'm kev
-        </Link>
-      </h1>
-      <div className="mobile-hamburger">
-        <button
-          type="button"
-          className="a"
-          onClick={() => onClick(link.opened, dispatch)}
-          onKeyDown={() => onClick(link.opened, dispatch)}
-        >
-          {link.opened ? '<<' : '>>'}
-        </button>
-      </div>
-      <div className={className(link.opened ? 'show' : 'hide', 'links')}>
-        <ul>
-          <Nav page="projects">
-            <DrawerLink page="projects">projects</DrawerLink>
-          </Nav>
-          <li>
-            <Drawer page="projects">
-              <Nav page="projects">
-                <Link to="/p/self">self</Link>
-              </Nav>
-              <Nav page="projects">
-                <Link to="/p/notte">notte.moe</Link>
-              </Nav>
-              <Nav page="projects">
-                <Link to="/p/kadopon">kadopon</Link>
-              </Nav>
-            </Drawer>
-          </li>
-          <DrawerLink page="illustration">illustration</DrawerLink>
-          <li>
-            <Drawer page="illustration">
-              <Nav page="illustration">
-                <Link to="/d/illustration2021">illustrations 2021</Link>
-              </Nav>
-              <Nav page="illustration">
-                <Link to="/d/nian">night shift</Link>
-              </Nav>
-              <Nav page="illustration">
-                <Link to="/d/ezelith">ezelith</Link>
-              </Nav>
-              <Nav page="illustration">
-                <Link to="/d/misc">assorted sketches</Link>
-              </Nav>
-            </Drawer>
-          </li>
-          <DrawerLink page="compositions">compositions</DrawerLink>
-          <li>
-            <Drawer page="compositions">
-              <Nav page="compositions">
-                <Link to="/c/branding">branding</Link>
-              </Nav>
-            </Drawer>
-          </li>
-        </ul>
-        <ul>
-          <Nav page="github">
-            <a href="https://github.com/chocolatemelt">github</a>
-          </Nav>
-          <Nav page="artstation">
-            <a href="https://www.artstation.com/wdrftgyfjklp">artstation</a>
-          </Nav>
-        </ul>
+const Main = ({ dispatch, link }) => {
+  const location = useLocation();
 
-        {location.pathname !== '/' && (
-          <Link className="x" to="/">
-            {link.opened ? 'home' : '[x]'}
+  return (
+    <>
+      <div className="side">
+        <h1>
+          <Link className="lead" to="/who">
+            hey, i'm kev
           </Link>
-        )}
-      </div>
-    </div>
+        </h1>
+        <div className="mobile-hamburger">
+          <button
+            type="button"
+            className="a"
+            onClick={() => onClick(link.opened, dispatch)}
+            onKeyDown={() => onClick(link.opened, dispatch)}
+          >
+            {link.opened ? '<<' : '>>'}
+          </button>
+        </div>
+        <div className={className(link.opened ? 'show' : 'hide', 'links')}>
+          <ul>
+            <Nav page="projects">
+              <DrawerLink page="projects">projects</DrawerLink>
+            </Nav>
+            <li>
+              <Drawer page="projects">
+                <Nav page="projects">
+                  <Link to="/p/self">self</Link>
+                </Nav>
+                <Nav page="projects">
+                  <Link to="/p/notte">notte.moe</Link>
+                </Nav>
+                <Nav page="projects">
+                  <Link to="/p/kadopon">kadopon</Link>
+                </Nav>
+              </Drawer>
+            </li>
+            <DrawerLink page="illustration">illustration</DrawerLink>
+            <li>
+              <Drawer page="illustration">
+                <Nav page="illustration">
+                  <Link to="/d/illustration2021">illustrations 2021</Link>
+                </Nav>
+                <Nav page="illustration">
+                  <Link to="/d/nian">night shift</Link>
+                </Nav>
+                <Nav page="illustration">
+                  <Link to="/d/ezelith">ezelith</Link>
+                </Nav>
+                <Nav page="illustration">
+                  <Link to="/d/misc">assorted sketches</Link>
+                </Nav>
+              </Drawer>
+            </li>
+            <DrawerLink page="compositions">compositions</DrawerLink>
+            <li>
+              <Drawer page="compositions">
+                <Nav page="compositions">
+                  <Link to="/c/branding">branding</Link>
+                </Nav>
+              </Drawer>
+            </li>
+          </ul>
+          <ul>
+            <Nav page="github">
+              <a href="https://github.com/chocolatemelt">github</a>
+            </Nav>
+            <Nav page="artstation">
+              <a href="https://www.artstation.com/wdrftgyfjklp">artstation</a>
+            </Nav>
+          </ul>
 
-    <TransitionGroup>
-      <CSSTransition key={location.key} timeout={{ enter: 100, exit: 100 }} classNames="fade">
-        <Switch location={location}>
-          <Route path="/" exact component={Index} />
-          <Route path="/p/kadopon" component={ProjectKadopon} />
-          <Route path="/p/self" component={ProjectSelf} />
-          <Route path="/p/notte" component={Notte} />
-          <Route path="/d/misc" component={DrawingsAssorted} />
-          <Route path="/d/ezelith" component={Ezelith2019} />
-          <Route path="/d/nian" component={Nian} />
-          <Route path="/d/illustration2021" component={Illustration2021} />
-          <Route path="/c/branding" component={CompBranding} />
-          <Route path="/who" component={Who} />
-          <Route path="/cv" component={CurriculumVitae} />
-          <Route path="/whereami" component={Where} />
-          <Route path="/(p|d|c)" exact component={RedirectIndex} />
-          <Route path="*" component={Redirect404} />
-        </Switch>
-      </CSSTransition>
-    </TransitionGroup>
-  </>
-);
+          {location.pathname !== '/' && (
+            <Link className="x" to="/">
+              {link.opened ? 'home' : '[x]'}
+            </Link>
+          )}
+        </div>
+      </div>
+
+      <TransitionGroup>
+        <CSSTransition key={location.key} timeout={{ enter: 100, exit: 100 }} classNames="fade">
+          <Routes location={location}>
+            <Route path="/" exact element={<Index />} />
+            <Route path="/p/kadopon" element={<ProjectKadopon />} />
+            <Route path="/p/self" element={<ProjectSelf />} />
+            <Route path="/p/notte" element={<Notte />} />
+            <Route path="/d/misc" element={<DrawingsAssorted />} />
+            <Route path="/d/ezelith" element={<Ezelith2019 />} />
+            <Route path="/d/nian" element={<Nian />} />
+            <Route path="/d/illustration2021" element={<Illustration2021 />} />
+            <Route path="/c/branding" element={<CompBranding />} />
+            <Route path="/who" element={<Who />} />
+            <Route path="/cv" element={<CurriculumVitae />} />
+            <Route path="/whereami" element={<Where />} />
+            <Route path="/(p|d|c)" exact element={<RedirectIndex />} />
+            <Route path="*" element={<Redirect404 />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
+    </>
+  );
+};
 
 Main.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string,
-    search: PropTypes.string,
-    hash: PropTypes.string,
-    key: PropTypes.string,
-  }),
   link: PropTypes.shape({
     opened: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   link: state.link,
 });
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default connect(mapStateToProps)(Main);

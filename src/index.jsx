@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie9';
 import 'react-app-polyfill/stable';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import Root from './containers/Root';
 import store from './configureStore';
@@ -10,6 +10,7 @@ import './css/reset.css';
 import './css/ricty.css';
 import './css/index.css';
 
-ReactDOM.render(<Root store={store} />, document.getElementById('main'));
+const root = ReactDOM.createRoot(document.getElementById('main'));
+root.render(<Root store={store} />);
 
 registerServiceWorker();

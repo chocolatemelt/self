@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware } from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
 
 export function configureStore(preloadedState) {
-  let middleware = [thunkMiddleware];
+  let middleware = [thunk];
 
   if (import.meta.env.MODE !== 'production') {
     const loggerMiddleware = createLogger();
