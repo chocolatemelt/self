@@ -6,7 +6,7 @@ import rootReducer from './reducers';
 export function configureStore(preloadedState) {
   let middleware = [thunkMiddleware];
 
-  if (process.env.NODE_ENV !== 'production') {
+  if (import.meta.env.MODE !== 'production') {
     const loggerMiddleware = createLogger();
     middleware = [...middleware, loggerMiddleware];
   }
