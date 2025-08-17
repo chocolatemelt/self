@@ -8,26 +8,78 @@ const CurriculumVitae = () => (
     <h3>Experience</h3>
     <div className="i-1 cventry">
       <CVHead left="Riot Games" right="2021-present" />
+      <p>Senior Software Engineer on the League Remix Team.</p>
+      <ul className="i-2">
+        <li>Unannounced social panel feature.</li>
+      </ul>
       <p>Senior Software Engineer on the League Client Development Efficiency Team.</p>
       <ul className="i-2">
-        <li>Introduced Puppeteer to League Client development flows.</li>
-        <li>Trained engineers in Shanghai on League Client frontend flow, development, and debugging processes.</li>
+        <li>
+          Aided in network stack debugging for an expired certificates issue plaguing the Korean
+          server for a small but nontrivial portion of Korean players.
+        </li>
+        <ul className="i-3">
+          <li>
+            Owned the network certificates management after the incident and have since proactively
+            prevented further issues with certificates.
+          </li>
+        </ul>
+        <li>Tech lead on Social Panel overhaul.</li>
+        <ul className="i-3">
+          <li>
+            Managed timelines and expectations for reworking extensive tech debt of the social
+            panel, dating back to 2015.
+          </li>
+          <li>
+            Lead small strike group of engineers to refactor old web components logic to Ember
+            components and services, parallelizing and distributing work and tracking it in JIRA.
+          </li>
+          <li>
+            Delivered in 6 months to players with minimal bugs and greatly improved performance for
+            large friends lists.
+          </li>
+        </ul>
+        <li>Introduced automated integration testing to League Client development flows.</li>
+        <ul className="i-3">
+          <li>Spiked out automated, headful browser tests with Puppeteer.</li>
+          <li>
+            Worked with Hextech Engine teams to develop an automated Build Verification Test as an
+            additional validation step to environment health.
+          </li>
+          <li>
+            Documented and disseminated learnings with larger League Client developer community.
+          </li>
+          <li>
+            Worked with deployment teams to add automated integration tests to the CI/CD pipeline.
+          </li>
+        </ul>
+        <li>
+          Trained engineers in Shanghai on League Client frontend flow, development, and debugging
+          processes.
+        </li>
+        <li>
+          Developed the profile button rework, working closely with UX designers to ensure the
+          migration was as smooth as possible for players.
+        </li>
         <li>Tech lead and primary individual contributor on Summoner Name Removal project.</li>
         <ul className="i-3">
           <li>Spiked on initial player name component engineering.</li>
           <li>Developed initial Ember player name component and associated web component.</li>
           <li>
-            Spiked batching design to reduce lookup hits to platform APIs in certain edge cases where
-            lots of names are looked up, e.g. Ranked Ladders.
+            Spiked batching design to reduce lookup hits to platform APIs in certain edge cases
+            where lots of names are looked up, e.g. Ranked Ladders.
           </li>
           <li>Implemented player name component in large majority of the client.</li>
-          <li>Coordinated with QA engineers and QA lead to test and deliver changes to players by patch 13.23.</li>
+          <li>
+            Coordinated with QA engineers and QA lead to test and deliver changes to players by
+            patch 13.23.
+          </li>
           <li>Managed global rolling release of all changes to each Riot Region.</li>
         </ul>
         <li>
-          Removed unused semantic versioning in internal plugins and build pipelines.
-          Internal plugins can't register past versions and always depend on the latest versions, so it was an
-          archaic step in developing plugins.
+          Removed unused semantic versioning in internal plugins and build pipelines. Internal
+          plugins can't register past versions and always depend on the latest versions, so it was
+          an archaic step in developing plugins.
         </li>
         <li>
           Cleaned up VNG-Garena migration project. This project concluded as I joined, but carried
@@ -53,8 +105,9 @@ const CurriculumVitae = () => (
           <li>Set up legacy object type support.</li>
         </ul>
         <li>
-          Part of the team developing the index page redesign, a year-long effort that resulted in significant
-          performance gains for end users and cleaned up archaic, difficult to navigate code.
+          Part of the team developing the index page redesign, a year-long effort that resulted in
+          significant performance gains for end users and cleaned up archaic, difficult to navigate
+          code.
         </li>
         <li>
           Developed and released version 2 of the recycle bin for standard and custom objects.
